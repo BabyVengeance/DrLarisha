@@ -456,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <button type="button" class="inspect-modal-close-btn" id="inspectModalClose" aria-label="Close Inspector (Esc)">&times;</button>
           
           <div class="inspect-modal-left" id="inspectModalLeft">
-            <div class="inspect-zoom-stage" id="inspectZoomStage" title="Click to zoom and pan label details">
+            <div class="inspect-zoom-stage" id="inspectZoomStage">
               <img src="" alt="" id="inspectModalImg" class="inspect-modal-img">
             </div>
             <div class="inspect-zoom-toolbar">
@@ -671,5 +671,158 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initProductImageInspector();
+
+  // --------------------------------------------------------------------------
+  // REVIEWS CAROUSEL — Auto-scroll, pause on hover, prev/next navigation
+  // --------------------------------------------------------------------------
+  const allCarousels = document.querySelectorAll('.reviews-carousel');
+
+  allCarousels.forEach((reviewsCarousel) => {
+    const reviewsTrack = reviewsCarousel.querySelector('.reviews-track');
+    if (!reviewsTrack) return;
+
+    const container = reviewsCarousel.closest('.site-container') || reviewsCarousel.parentElement;
+    const prevBtn = container ? container.querySelector('.carousel-prev') : document.getElementById('reviewsPrev');
+    const nextBtn = container ? container.querySelector('.carousel-next') : document.getElementById('reviewsNext');
+    const indicatorsWrap = container ? container.querySelector('.carousel-indicators') : document.getElementById('reviewsIndicators');
+
+    const cards = reviewsTrack.querySelectorAll('.review-card');
+    const totalCards = cards.length;
+    let currentIndex = 0;
+    let autoplayTimer = null;
+    const autoplayDelay = 4000;
+
+    function getCardsPerView() {
+      const w = window.innerWidth;
+      if (w >= 960) return 3;
+      if (w >= 600) return 2;
+      return 1;
+    }
+
+    function getMaxIndex() {
+      const perView = getCardsPerView();
+      return Math.max(0, totalCards - perView);
+    }
+
+    function getCardWidth() {
+      if (!cards.length) return 0;
+      const trackGap = 24;
+      return cards[0].offsetWidth + trackGap;
+    }
+
+    function slideTo(index) {
+      const maxIdx = getMaxIndex();
+      if (maxIdx <= 0) {
+        currentIndex = 0;
+      } else if (index < 0) {
+        currentIndex = maxIdx;
+      } else if (index > maxIdx) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+      const offset = currentIndex * getCardWidth();
+      reviewsTrack.style.transform = `translateX(-${offset}px)`;
+      updateIndicators();
+      updateArrows();
+    }
+
+    function updateArrows() {
+      const maxIdx = getMaxIndex();
+      const cannotScroll = maxIdx <= 0;
+      if (prevBtn) prevBtn.disabled = cannotScroll;
+      if (nextBtn) nextBtn.disabled = cannotScroll;
+    }
+
+    function buildIndicators() {
+      if (!indicatorsWrap) return;
+      indicatorsWrap.innerHTML = '';
+      const maxIdx = getMaxIndex();
+      const dotCount = maxIdx + 1;
+      for (let i = 0; i < dotCount; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === currentIndex ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to slide group ${i + 1}`);
+        dot.addEventListener('click', () => {
+          slideTo(i);
+          restartAutoplay();
+        });
+        indicatorsWrap.appendChild(dot);
+      }
+    }
+
+    function updateIndicators() {
+      if (!indicatorsWrap) return;
+      const dots = indicatorsWrap.querySelectorAll('.carousel-dot');
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function advanceNext() {
+      slideTo(currentIndex + 1);
+    }
+
+    function advancePrev() {
+      slideTo(currentIndex - 1);
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+      autoplayTimer = setInterval(advanceNext, autoplayDelay);
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    function restartAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        advancePrev();
+        restartAutoplay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        advanceNext();
+        restartAutoplay();
+      });
+    }
+
+    reviewsCarousel.addEventListener('mouseenter', stopAutoplay);
+    reviewsCarousel.addEventListener('mouseleave', startAutoplay);
+    reviewsCarousel.addEventListener('focusin', stopAutoplay);
+    reviewsCarousel.addEventListener('focusout', startAutoplay);
+
+    function initCarousel() {
+      const maxIdx = getMaxIndex();
+      if (currentIndex > maxIdx) currentIndex = maxIdx;
+      buildIndicators();
+      slideTo(currentIndex);
+      startAutoplay();
+    }
+
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        buildIndicators();
+        slideTo(currentIndex);
+      }, 150);
+    });
+
+    initCarousel();
+  });
 });
 

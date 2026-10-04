@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie &amp; Local Storage Policy | Dr Larisha Pather</title>
+  <meta name="description" content="Cookie and browser storage policy for Dr Larisha Pather Medical Aesthetics and Serene Skincare boutique dispensary in Durban, South Africa.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Assets/logos/logo-transparent.png">
+  
+  <!-- Google Fonts: Playfair Display (Brand Display) & Plus Jakarta Sans (Brand Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Structured Data (MedicalWebPage Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Cookie & Local Storage Policy - Dr Larisha Pather",
+    "description": "Cookie, tracking technology, and browser storage governance for Dr Larisha Pather web platform.",
+    "url": "https://drlarisha.co.za/cookie-policy.html",
+    "publisher": {
+      "@type": "MedicalBusiness",
+      "name": "Dr Larisha Pather - Medical Aesthetics & Wellness",
+      "address": "Suite 2, Parklands Hospital, 45 Hopelands Road, Overport, Durban, KZN"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Emergency & Location Trust Bar -->
+  <aside class="top-trust-bar" aria-label="Practice announcement">
+    <div class="site-container trust-bar-flex">
+      <span class="trust-pill">Suite 2, Netcare Parklands Hospital, Durban</span>
+      <span class="trust-hours">Mon – Sat: 09:00 – 17:00</span>
+      <a href="tel:+27844608676" class="trust-call">Direct Line: +27 84 460 8676</a>
+    </div>
+  </aside>
+
+  <!-- Master Sticky Header -->
+  <header class="master-header" id="masterHeader">
+    <div class="site-container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Dr Larisha Pather Home">
+        <img src="Assets/logos/logo-transparent.png" alt="Dr Larisha Pather Medical Aesthetics Logo" class="brand-logo" width="66" height="58">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="services.html" class="nav-item">Treatments</a>
+        <a href="products.html" class="nav-item">Skincare</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </nav>
+
+      <!-- Header Action Group -->
+      <div class="header-actions">
+        <button type="button" class="cart-trigger" id="cartOpenBtn" aria-label="View skincare cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-counter" id="cartCount">0</span>
+        </button>
+
+        <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation%20at%20Parklands%20Hospital." target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta">Book Consultation</a>
+
+        <!-- Mobile Hamburger Toggle (48px footprint) -->
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <img src="Assets/logos/logo-transparent.png" alt="Dr Larisha Pather Logo" class="drawer-logo" width="52" height="46">
+      <button type="button" class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-content">
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Treatments</a>
+        <a href="products.html" class="mobile-link">Skincare</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </nav>
+      <div class="drawer-actions">
+        <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation%20at%20Parklands%20Hospital." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">Book via WhatsApp</a>
+        <div class="drawer-contact-info">
+          <p>Suite 2, Parklands Hospital, Overport</p>
+          <a href="tel:+27844608676">+27 84 460 8676</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- SUBPAGE EDITORIAL HERO -->
+    <section class="subpage-hero" aria-label="Page Header">
+      <div class="site-container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span class="breadcrumb-current">Cookie Policy</span>
+        </nav>
+        <span class="section-eyebrow">Digital Privacy &amp; Browser Storage</span>
+        <h1 class="subpage-title">Cookie &amp; Local Browser Storage Policy</h1>
+        <p class="subpage-lead">
+          Transparent disclosure explaining how Dr Larisha Pather utilizes cookies, local web storage, and session tokens to maintain shopping bag functionality and provide a secure digital patient experience.
+        </p>
+        <div class="subpage-quick-stats">
+          <div class="meta-pill-item">
+            <span class="meta-pill-label">Primary Mechanism</span>
+            <span class="meta-pill-value">Client-Side LocalStorage</span>
+          </div>
+          <div class="meta-pill-item">
+            <span class="meta-pill-label">Tracking Cookies</span>
+            <span class="meta-pill-value">Zero Non-Essential Third-Party Trackers</span>
+          </div>
+          <div class="meta-pill-item">
+            <span class="meta-pill-label">Last Updated</span>
+            <span class="meta-pill-value">October 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEGAL DOCUMENT BODY -->
+    <section class="legal-page-wrapper" aria-label="Cookie Policy Document">
+      <div class="site-container">
+        <div class="legal-content-container">
+
+          <div class="compliance-flag-box">
+            <span class="compliance-flag-title">Data Minimization Principle</span>
+            <p><strong>POPIA Principle of Minimality:</strong> Our digital architecture operates on the principle of data minimization. We do not employ third-party advertising data brokers, cross-site profiling trackers, or invasive telemetry scripts.</p>
+          </div>
+
+          <div class="legal-toc" aria-label="Table of Contents">
+            <span class="legal-toc-title">Document Directory</span>
+            <ul class="legal-toc-list">
+              <li><a href="#section-1">&sect; 1. What Are Cookies &amp; Local Storage?</a></li>
+              <li><a href="#section-2">&sect; 2. Categories of Storage We Use</a></li>
+              <li><a href="#section-3">&sect; 3. Exact Storage Elements on This Website</a></li>
+              <li><a href="#section-4">&sect; 4. Third-Party Analytics &amp; Embedded Media</a></li>
+              <li><a href="#section-5">&sect; 5. Managing &amp; Disabling Cookies in Your Browser</a></li>
+              <li><a href="#section-6">&sect; 6. Policy Inquiries &amp; Information Officer</a></li>
+            </ul>
+          </div>
+
+          <!-- Section 1 -->
+          <article class="legal-section" id="section-1">
+            <h2>1. What Are Cookies and Local Storage?</h2>
+            <p>A cookie is a small text file placed on your computer or mobile device when you visit a website. Cookies allow websites to remember user actions, authenticate sessions, and store preferences over time.</p>
+            <p><strong>Web Storage (HTML5 LocalStorage &amp; SessionStorage):</strong> In addition to traditional cookies, modern web platforms utilize browser LocalStorage. Unlike cookies, data stored in LocalStorage does not get transmitted automatically to web servers with every HTTP network request, resulting in superior privacy, faster load times, and reduced bandwidth usage.</p>
+          </article>
+
+          <!-- Section 2 -->
+          <article class="legal-section" id="section-2">
+            <h2>2. Categories of Storage Technologies We Utilize</h2>
+            <p>We classify our browser storage mechanisms into distinct functional categories:</p>
+            <ul>
+              <li><strong>1. Strictly Necessary Storage:</strong> Essential for the operation of the website. These enable core features such as secure page navigation, accessibility settings, and retaining skincare items in your active shopping bag drawer as you browse between pages. Because these are strictly necessary to deliver the service you request, they do not require prior consent under POPIA.</li>
+              <li><strong>2. Functional &amp; Preference Storage:</strong> Used to recognize you when you return to our website, preserving choices such as treatment categories, product filters, or dismissed announcement bars.</li>
+              <li><strong>3. Anonymized Performance &amp; Diagnostic Telemetry:</strong> Aggregated, non-personally identifiable metrics (such as page load speeds, Core Web Vitals performance, and HTTP error rates) used solely to ensure technical stability across South African mobile networks.</li>
+            </ul>
+          </article>
+
+          <!-- Section 3 -->
+          <article class="legal-section" id="section-3">
+            <h2>3. Exact Storage Elements Deployed on This Website</h2>
+            <div class="legal-table-wrapper">
+              <table class="legal-table">
+                <thead>
+                  <tr>
+                    <th>Storage Key / Name</th>
+                    <th>Type &amp; Expiry</th>
+                    <th>Category</th>
+                    <th>Exact Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>skinlab_cart</code></td>
+                    <td>LocalStorage (Persistent)</td>
+                    <td>Strictly Necessary</td>
+                    <td>Saves selected skincare items, quantities, and pricing in your active bag across page views until checkout.</td>
+                  </tr>
+                  <tr>
+                    <td><code>pref_reduced_motion</code></td>
+                    <td>LocalStorage (Persistent)</td>
+                    <td>Functional / Accessibility</td>
+                    <td>Remembers user accessibility preference for reduced motion and animations.</td>
+                  </tr>
+                  <tr>
+                    <td><code>active_filter_category</code></td>
+                    <td>SessionStorage (Session)</td>
+                    <td>Functional</td>
+                    <td>Retains your selected skincare filter tab (e.g. Brightening or Sun Protection) while navigating products.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <!-- Section 4 -->
+          <article class="legal-section" id="section-4">
+            <h2>4. Third-Party Analytics &amp; Embedded Media</h2>
+            <p>Our website is designed with a lightweight, secure architecture:</p>
+            <ul>
+              <li><strong>No Third-Party Retargeting Pixels:</strong> We do not load third-party ad network tracking beacons that track your browsing habits across unrelated external websites.</li>
+              <li><strong>Google Maps &amp; Directions:</strong> Embedded Netcare Parklands Hospital location maps use privacy-enhanced container parameters that minimize tracking until you directly click to generate driving directions.</li>
+              <li><strong>WhatsApp Click-to-Chat:</strong> When you click our booking buttons, you are transferred directly to WhatsApp (a Meta platform). Your interaction within the WhatsApp application is governed by Meta's respective privacy policy.</li>
+            </ul>
+          </article>
+
+          <!-- Section 5 -->
+          <article class="legal-section" id="section-5">
+            <h2>5. How to Manage, Block, or Clear Cookies in Your Browser</h2>
+            <p>Most modern web browsers allow you to control cookie preferences and clear stored local data at any time through your browser settings:</p>
+            <ul>
+              <li><strong>Google Chrome:</strong> Settings &rarr; Privacy and security &rarr; Third-party cookies &rarr; See all site data and permissions.</li>
+              <li><strong>Apple Safari (iOS / macOS):</strong> Settings &rarr; Safari &rarr; Advanced &rarr; Privacy &rarr; Block All Cookies (or Manage Website Data).</li>
+              <li><strong>Mozilla Firefox:</strong> Settings &rarr; Privacy &amp; Security &rarr; Cookies and Site Data &rarr; Clear Data.</li>
+              <li><strong>Microsoft Edge:</strong> Settings &rarr; Cookies and site permissions &rarr; Manage and delete cookies and site data.</li>
+            </ul>
+            <p><em>Note: If you clear LocalStorage or block functional cookies, your active shopping bag items will reset when you refresh or close your browser tab.</em></p>
+          </article>
+
+          <!-- Section 6 -->
+          <article class="legal-section" id="section-6">
+            <h2>6. Policy Inquiries &amp; Information Officer</h2>
+            <p>For questions or requests concerning our use of cookies, browser storage, or your personal data rights under POPIA, please contact our designated practice Information Officer:</p>
+            <div class="legal-callout">
+              <span class="legal-callout-title">Practice Information Officer</span>
+              <p>
+                <strong>Attn:</strong> Dr Larisha Pather<br>
+                <strong>Practice Base:</strong> Suite 2, Netcare Parklands Hospital, 45 Hopelands Road, Overport, Durban, KZN, 4001<br>
+                <strong>Email:</strong> <a href="mailto:info@drlarisha.co.za">info@drlarisha.co.za</a><br>
+                <strong>Comprehensive Data Policy:</strong> View our full <a href="privacy-policy.html">POPIA Data Privacy Policy</a>.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MASTER FOOTER -->
+  <footer class="master-footer" aria-label="Site Footer">
+    <div class="site-container footer-inner">
+      <div class="footer-col brand-col">
+        <img src="Assets/logos/logo-transparent.png" alt="Dr Larisha Pather Logo" class="footer-logo" width="50" height="44">
+        <p class="footer-bio">
+          Physician-administered medical aesthetics, clinical skin restoration, and metabolic wellness based at Netcare
+          Parklands Hospital, Overport, Durban.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://www.facebook.com/p/Dr-Larisha-Pather-61576050460534/" target="_blank"
+            rel="noopener noreferrer" class="social-icon-link" aria-label="Follow Dr Larisha Pather on Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/drlarisha/" target="_blank" rel="noopener noreferrer"
+            class="social-icon-link" aria-label="Follow Dr Larisha Pather on Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Clinical Treatments</h4>
+        <ul class="footer-nav">
+          <li><a href="services.html#anti-aging">BTOX Anti-Wrinkle</a></li>
+          <li><a href="services.html#dermal-fillers">Signature Lip Fillers</a></li>
+          <li><a href="services.html#weight-loss">Medical Weight Loss</a></li>
+          <li><a href="services.html#wellness-drips">Glutathione IV Drips</a></li>
+          <li><a href="services.html#body-contouring">Submental Contouring</a></li>
+          <li><a href="services.html#chemical-peels">Medical Chemical Peels</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Serene Skincare</h4>
+        <ul class="footer-nav">
+          <li><a href="products.html">Brightening Complex</a></li>
+          <li><a href="products.html">Mineral SPF 40 Sunscreen</a></li>
+          <li><a href="products.html">Glutathione Restorative Cream</a></li>
+          <li><a href="products.html">Snail Mucin Barrier Repair</a></li>
+          <li><a href="products.html">Hair Growth Follicle Serum</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Contact &amp; Hours</h4>
+        <p class="footer-contact-item"><strong>Address:</strong> Suite 2, Parklands Hospital, 45 Hopelands Road, Overport, Durban, KZN</p>
+        <p class="footer-contact-item"><strong>WhatsApp / Tel:</strong> <a href="tel:+27844608676">+27 84 460 8676</a></p>
+        <p class="footer-contact-item"><strong>Email:</strong> <a href="mailto:info@drlarisha.co.za">info@drlarisha.co.za</a></p>
+        <p class="footer-contact-item"><strong>Hours:</strong> Mon – Sat: 09:00 – 17:00</p>
+      </div>
+    </div>
+
+    <!-- Legal & Compliance Notice -->
+    <div class="site-container footer-legal-bar">
+      <div class="medical-disclaimer">
+        <p><strong>Medical Notice:</strong> All aesthetic procedures and medical weight management therapies are
+          personally administered by registered medical doctor Dr Larisha Pather (MBChB). Individual clinical results
+          may vary depending on physiological profile. Treatments are performed in accordance with HPCSA medical ethics
+          and patient safety protocols.</p>
+      </div>
+      <div class="legal-links-row">
+        <span>&copy; 2026 Dr Larisha Pather. All Rights Reserved.</span>
+        <a href="privacy-policy.html">POPIA Privacy Policy</a>
+        <a href="terms.html">Terms of Clinical Service</a>
+        <a href="medical-disclaimer.html">Medical Notice (HPCSA)</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <span>Engineered by Apex Digital SA</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SLIDING SKINCARE CART DRAWER -->
+  <aside class="cart-drawer-overlay" id="cartOverlay" aria-hidden="true">
+    <div class="cart-drawer" role="dialog" aria-modal="true" aria-label="Skincare Shopping Cart">
+      <div class="cart-header">
+        <h3 class="cart-title">Your Skincare Bag</h3>
+        <button type="button" class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart drawer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span class="cart-subtotal" id="cartSubtotal">R0.00</span>
+        </div>
+        <p class="cart-shipping-note">Free courier across SA on orders over R1 200</p>
+        <button type="button" class="btn btn-primary btn-block checkout-btn" id="cartCheckoutBtn">
+          Proceed to Order via WhatsApp
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
