@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr Larisha Pather | Bespoke Medical Aesthetics & Holistic Wellness | Parklands Hospital Durban</title>
+  <meta name="description"
+    content="Physician-led medical aesthetics, lip filler contouring, BTOX rejuvenation, clinical weight management, and IV wellness infusions at Netcare Parklands Hospital, Overport, Durban.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logos/logo.svg">
+
+  <!-- Google Fonts: Playfair Display (Brand Display) & Plus Jakarta Sans (Brand Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data (MedicalBusiness / Physician Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Dr Larisha Pather - Medical Aesthetics & Wellness",
+    "image": "assets/logos/logo.png",
+    "url": "https://www.facebook.com/p/Dr-Larisha-Pather-61576050460534/",
+    "telephone": "+27844608676",
+    "priceRange": "R500 - R6500",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Suite 2, Parklands Hospital, 45 Hopelands Road",
+      "addressLocality": "Overport, Durban",
+      "addressRegion": "KwaZulu-Natal",
+      "postalCode": "4001",
+      "addressCountry": "ZA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -29.8378,
+      "longitude": 30.9995
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "medicalSpecialty": ["Dermatology", "Aesthetic Medicine", "Clinical Wellness"],
+    "founder": {
+      "@type": "Person",
+      "name": "Dr Larisha Pather",
+      "jobTitle": "Medical Doctor & Aesthetic Clinician"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Top Emergency & Location Trust Bar -->
+  <aside class="top-trust-bar" aria-label="Practice announcement">
+    <div class="site-container trust-bar-flex">
+      <span class="trust-pill">Suite 2, Netcare Parklands Hospital, Durban</span>
+      <span class="trust-hours">Mon – Sat: 09:00 – 17:00</span>
+      <a href="tel:+27844608676" class="trust-call">Direct Line: +27 84 460 8676</a>
+    </div>
+  </aside>
+
+  <!-- Master Sticky Header -->
+  <header class="master-header" id="masterHeader">
+    <div class="site-container header-inner">
+      <a href="#home" class="brand-link" aria-label="Dr Larisha Pather Home">
+        <img src="assets/logos/logo.svg" alt="Dr Larisha Pather Medical Aesthetics Logo" class="brand-logo" width="118"
+          height="58">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-item active" aria-current="page">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="services.html" class="nav-item">Treatments</a>
+        <a href="products.html" class="nav-item">Skincare</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </nav>
+
+      <!-- Header Action Group -->
+      <div class="header-actions">
+        <button type="button" class="cart-trigger" id="cartOpenBtn" aria-label="View skincare cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-counter" id="cartCount">0</span>
+        </button>
+
+        <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+          target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta">Book Consultation</a>
+
+        <!-- Mobile Hamburger Toggle (48px footprint) -->
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Open mobile navigation menu"
+          aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <img src="assets/logos/logo.svg" alt="Dr Larisha Pather Logo" class="drawer-logo" width="94" height="46">
+      <button type="button" class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-content">
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-link active" aria-current="page">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Treatments</a>
+        <a href="products.html" class="mobile-link">Skincare</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+          target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">Book Consultation</a>
+        <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha,%20I%20would%20like%20to%20enquire%20about%20a%20treatment."
+          target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+          WhatsApp Clinical Team
+        </a>
+        <div class="drawer-contact-info">
+          <p>Suite 2, Parklands Hospital, Overport</p>
+          <a href="tel:+27844608676">+27 84 460 8676</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- HERO SECTION (Page 1 Anchor) -->
+    <section class="section-hero" id="home" aria-label="Hero Introduction">
+      <div class="site-container hero-grid">
+        <div class="hero-content">
+          <div class="hero-eyebrow">Medical Aesthetics &bull; Clinical Wellness &bull; Skin Health</div>
+          <h1 class="hero-title">Bespoke Medical Aesthetics &amp; Holistic Wellness</h1>
+          <p class="hero-lead">
+            Natural-looking results and physician-led aesthetic care based at Netcare Parklands Hospital, Overport,
+            Durban. Dedicated to helping you feel confident in your skin, inside and out.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+              target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book Consultation</a>
+            <a href="#skincare" class="btn btn-secondary">
+              Shop Skincare
+            </a>
+          </div>
+
+          <div class="hero-credentials">
+            <div class="credential-item">
+              <span class="cred-title">Netcare Parklands Base</span>
+              <span class="cred-sub">Hospital Suite 2, Overport</span>
+            </div>
+            <div class="credential-divider" aria-hidden="true"></div>
+            <div class="credential-item">
+              <span class="cred-title">Physician-Administered</span>
+              <span class="cred-sub">Dr Larisha Pather, MBChB</span>
+            </div>
+            <div class="credential-divider" aria-hidden="true"></div>
+            <div class="credential-item">
+              <span class="cred-title">Verified Pricing</span>
+              <span class="cred-sub">Starting from R500</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <img src="Assets/images/dr larisha 1.jpg" alt="Dr Larisha Pather Aesthetic Physician in clinical suit"
+              class="hero-portrait-img" width="560" height="700" fetchpriority="high">
+            <div class="hero-doctor-badge">
+              <span class="badge-role">Medical Doctor &amp; Aesthetic Clinician</span>
+              <span class="badge-name">Dr Larisha Pather</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLINICAL PHILOSOPHY PILLARS (Section 2) -->
+    <section class="section-philosophy" aria-label="Clinical Philosophy">
+      <div class="site-container">
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <div class="pillar-number">01</div>
+            <h3 class="pillar-title">Natural-Looking Results</h3>
+            <p class="pillar-desc">
+              Enhancing your innate contours without distortion. Every injection and treatment respects natural anatomy
+              for subtle, refreshed harmony.
+            </p>
+          </div>
+          <div class="philosophy-card">
+            <div class="pillar-number">02</div>
+            <h3 class="pillar-title">Personalised Treatment Plans</h3>
+            <p class="pillar-desc">
+              Your skin profile is unique. Dr Larisha crafts a tailored clinical roadmap calibrated to your metabolic
+              state, skin type, and lifestyle.
+            </p>
+          </div>
+          <div class="philosophy-card">
+            <div class="pillar-number">03</div>
+            <h3 class="pillar-title">Treating The Root Cause</h3>
+            <p class="pillar-desc">
+              Moving beyond surface masking. We integrate medical weight support, micronutrient infusions, and clinical
+              skincare for cellular vitality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE PROCEDURES BENTO SHOWCASE (Section 3) -->
+    <section class="section-featured-bento" aria-label="Featured Clinical Procedures">
+      <div class="site-container">
+        <div class="section-head text-center">
+          <div class="section-eyebrow">Signature Clinical Offers</div>
+          <h2 class="section-title">Verified Practice Packages</h2>
+          <p class="section-subtitle">Physician-administered treatments published directly from Dr Larisha's Durban
+            clinical practice.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Featured Lip Filler Card -->
+          <article class="bento-card bento-card-large">
+            <div class="bento-media-wrap">
+              <img src="Assets/images/Lip filler cover.jpg" alt="Signature Lip Filler Contouring Treatment Special"
+                class="bento-img" width="600" height="750" loading="lazy">
+            </div>
+            <div class="bento-body">
+              <div class="bento-meta">
+                <span class="procedure-category">Medical Aesthetics</span>
+                <span class="procedure-price">R3 000</span>
+              </div>
+              <h3 class="bento-heading">Signature Lip Filler Contouring</h3>
+              <p class="bento-copy">
+                Lip filler is calling... Enhancing natural beauty, fuller more defined lips, with a naturally balanced
+                profile.
+              </p>
+              <ul class="bento-checklist">
+                <li>Defined vermilion lip borders</li>
+                <li>Hydrated, soft natural volume</li>
+                <li>Balanced upper and lower lip proportions</li>
+              </ul>
+              <div class="bento-footer">
+                <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20the%20Signature%20Lip%20Filler."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book via WhatsApp</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured BTOX Card -->
+          <article class="bento-card bento-card-compact">
+            <div class="bento-media-wrap">
+              <img src="Assets/images/Btox cover.jpg" alt="Targeted BTOX Smoothing Rejuvenation" class="bento-img"
+                width="600" height="750" loading="lazy">
+            </div>
+            <div class="bento-body">
+              <div class="bento-meta">
+                <span class="procedure-category">Anti-Wrinkle</span>
+                <span class="procedure-price">From R1 500</span>
+              </div>
+              <h3 class="bento-heading">Targeted BTOX Smoothing</h3>
+              <p class="bento-copy">
+                Smoother. Softer. You. Softens forehead expression lines, frown creases, and bunny lines while
+                preventing deeper wrinkles.
+              </p>
+              <div class="bento-pricing-chips">
+                <span class="price-chip">Forehead: R2 000</span>
+                <span class="price-chip">Nose: R1 500</span>
+                <span class="price-chip">Full Face: R5 000</span>
+              </div>
+              <div class="bento-footer">
+                <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20BTOX%20Treatment."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Book on WhatsApp</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured Weight Management Card -->
+          <article class="bento-card bento-card-compact">
+            <div class="bento-media-wrap">
+              <img src="Assets/images/Medical weight management.jpg"
+                alt="Medical Weight Loss and Body Contouring Support" class="bento-img" width="600" height="750"
+                loading="lazy">
+            </div>
+            <div class="bento-body">
+              <div class="bento-meta">
+                <span class="procedure-category">Body &amp; Metabolic</span>
+                <span class="procedure-price">From R1 500</span>
+              </div>
+              <h3 class="bento-heading">Medical Weight Loss Programs</h3>
+              <p class="bento-copy">
+                The journey is about a stronger, healthier you. Physician-guided fat reduction and metabolic injections.
+              </p>
+              <div class="bento-pricing-chips">
+                <span class="price-chip">Tummy Package: R3 500</span>
+                <span class="price-chip">Double Chin: R1 500</span>
+                <span class="price-chip">Injections x4: R3 000</span>
+              </div>
+              <div class="bento-footer">
+                <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20enquire%20about%20Medical%20Weight%20Loss."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Enquire via WhatsApp</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT DR LARISHA (Page 2 Anchor) -->
+    <section class="section-about" id="about" aria-label="About Dr Larisha Pather">
+      <div class="site-container about-grid">
+        <div class="about-visual">
+          <div class="about-portrait-frame">
+            <img src="Assets/images/dr larisha 1.jpg"
+              alt="Dr Larisha Pather, MBChB Medical Doctor at Parklands Hospital" class="about-portrait-img" width="520"
+              height="520" loading="lazy">
+            <div class="about-experience-stamp">
+              <span class="stamp-degree">MBChB</span>
+              <span class="stamp-label">Registered Medical Practitioner</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-eyebrow">The Physician's Distinction</div>
+          <h2 class="section-title">Dr. Larisha Pather</h2>
+          <p class="about-lead">Dr Larisha is a passionate medical doctor &amp; aesthetic practitioner dedicated to
+            helping patients feel confident in their skin, inside and out.</p>
+
+          <p class="about-text">Doctor-led Medical Aesthetics, Skin Health, and Holistic Wellness operating from Suite 2
+            at Netcare Parklands Hospital, Overport, Durban. Her practice is built upon three clinical pillars:
+            natural-looking results, personalised treatment plans, and treating the root cause rather than merely
+            masking symptoms.</p>
+
+          <!-- 3-Step Patient Journey Timeline -->
+          <div class="patient-journey">
+            <div class="journey-header-wrap">
+              <h3 class="journey-header">The Three-Step Patient Pathway</h3>
+            </div>
+            <div class="journey-steps">
+              <div class="journey-step">
+                <div class="step-indicator">
+                  <span class="step-circle">01</span>
+                  <span class="step-line" aria-hidden="true"></span>
+                </div>
+                <div class="step-details">
+                  <h4 class="step-title">Consultation &amp; Skin Assessment</h4>
+                  <p class="step-desc">Comprehensive medical and lifestyle review evaluating skin integrity, facial
+                    volume, and health goals.</p>
+                </div>
+              </div>
+              <div class="journey-step">
+                <div class="step-indicator">
+                  <span class="step-circle">02</span>
+                  <span class="step-line" aria-hidden="true"></span>
+                </div>
+                <div class="step-details">
+                  <h4 class="step-title">Tailored Clinical Plan</h4>
+                  <p class="step-desc">A customized procedural schedule matching precision anti-wrinkle, dermal fillers,
+                    IV drips, or metabolic therapy.</p>
+                </div>
+              </div>
+              <div class="journey-step">
+                <div class="step-indicator">
+                  <span class="step-circle">03</span>
+                </div>
+                <div class="step-details">
+                  <h4 class="step-title">Review &amp; Ongoing Maintenance</h4>
+                  <p class="step-desc">Scheduled post-treatment review ensuring balanced results and at-home clinical
+                    skincare support.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta-row">
+            <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+              target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book Consultation with Dr Larisha</a>
+            <a href="tel:+27844608676" class="btn btn-secondary">
+              Call Suite 2: 084 460 8676
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL TREATMENTS & SERVICES DIRECTORY (Page 3 Anchor) -->
+    <section class="section-treatments" id="treatments" aria-label="Comprehensive Treatments Directory">
+      <div class="site-container">
+        <div class="section-head text-center">
+          <div class="section-eyebrow">Clinical Portfolio</div>
+          <h2 class="section-title">Treatments &amp; Medical Services</h2>
+          <p class="section-subtitle">Select a category to view procedural details, expected treatment duration, and
+            transparent Durban pricing.</p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="treatment-tabs" role="tablist" aria-label="Treatment categories">
+          <button type="button" class="tab-btn active" role="tab" aria-selected="true" aria-controls="tabAesthetics"
+            id="btnTabAesthetics" data-tab="tabAesthetics">
+            Medical Aesthetics
+          </button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="tabWeight"
+            id="btnTabWeight" data-tab="tabWeight">
+            Body &amp; Weight Loss
+          </button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="tabInfusions"
+            id="btnTabInfusions" data-tab="tabInfusions">
+            IV Wellness Drips
+          </button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="tabSkin" id="btnTabSkin"
+            data-tab="tabSkin">
+            Skin &amp; Peels
+          </button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="tabMedical"
+            id="btnTabMedical" data-tab="tabMedical">
+            Wound Care &amp; GP
+          </button>
+        </div>
+
+        <!-- Tab 1: Medical Aesthetics -->
+        <div class="tab-pane active" id="tabAesthetics" role="tabpanel" aria-labelledby="btnTabAesthetics">
+          <div class="treatment-grid">
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Signature Special</span>
+                <span class="t-price">R3 000</span>
+              </div>
+              <h3 class="t-title">Lip Filler Contouring</h3>
+              <p class="t-desc">Enhances natural lip symmetry, restores lost volume, and smooths perioral fine lines
+                with medical hyaluronic acid.</p>
+              <div class="t-meta">
+                <span>Duration: 45 Mins</span>
+                <span>Downtime: Minimal (24h)</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book via WhatsApp</a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Anti-Wrinkle</span>
+                <span class="t-price">R2 000</span>
+              </div>
+              <h3 class="t-title">Forehead &amp; Brow BTOX</h3>
+              <p class="t-desc">Relaxes hyperactive frontalis and glabella muscles to eliminate forehead lines and worry
+                creases while preserving natural expression.</p>
+              <div class="t-meta">
+                <span>Duration: 30 Mins</span>
+                <span>Downtime: None</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book via WhatsApp</a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Targeted</span>
+                <span class="t-price">R1 500</span>
+              </div>
+              <h3 class="t-title">Nose &amp; Bunny Line BTOX</h3>
+              <p class="t-desc">Surgical precision micro-injections targeting dynamic wrinkles along the bridge of the
+                nose and upper nasolabial region.</p>
+              <div class="t-meta">
+                <span>Duration: 20 Mins</span>
+                <span>Downtime: None</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book via WhatsApp</a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Full Face Refresh</span>
+                <span class="t-price">R5 000</span>
+              </div>
+              <h3 class="t-title">Full Face BTOX Rejuvenation</h3>
+              <p class="t-desc">Comprehensive three-zone neuromodulator protocol addressing forehead, crow's feet, and
+                frown lines for a unified rested aesthetic.</p>
+              <div class="t-meta">
+                <span>Duration: 60 Mins</span>
+                <span>Downtime: None</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book via WhatsApp</a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Best Value Bundle</span>
+                <span class="t-price">R6 500</span>
+              </div>
+              <h3 class="t-title">Full Face BTOX + Lip Filler</h3>
+              <p class="t-desc">The ultimate clinical balance: full three-zone neuromodulator relaxation combined with
+                hyaluronic acid lip contouring.</p>
+              <div class="t-meta">
+                <span>Duration: 75 Mins</span>
+                <span>Downtime: 24h</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Body & Weight Loss -->
+        <div class="tab-pane" id="tabWeight" role="tabpanel" aria-labelledby="btnTabWeight">
+          <div class="treatment-grid">
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Complete Package</span>
+                <span class="t-price">R3 500</span>
+              </div>
+              <h3 class="t-title">Tummy Reduction Package</h3>
+              <p class="t-desc">Includes targeted subcutaneous localized fat-dissolving protocols, medical coloring
+                assessment, and a complimentary firming lotion.</p>
+              <div class="t-meta">
+                <span>Includes: Free Lotion</span>
+                <span>Doctor-Guided</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha,%20I%20would%20like%20to%20enquire%20about%20the%20Tummy%20Reduction%20Package."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+                Enquire via WhatsApp
+              </a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Submental Contour</span>
+                <span class="t-price">From R1 500</span>
+              </div>
+              <h3 class="t-title">Double Chin Package</h3>
+              <p class="t-desc">Physician-administered lipolytic injections targeting stubborn submental fullness to
+                sculpt a refined jawline definition.</p>
+              <div class="t-meta">
+                <span>Duration: 30 Mins</span>
+                <span>Sessions: 1 - 3</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha,%20I%20would%20like%20to%20enquire%20about%20the%20Double%20Chin%20Package."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+                Enquire via WhatsApp
+              </a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Course of 4</span>
+                <span class="t-price">From R3 000</span>
+              </div>
+              <h3 class="t-title">Weight Loss Injections Course</h3>
+              <p class="t-desc">A structured course of 4 physician-monitored metabolic support injections assisting
+                appetite regulation and sustainable body re-composition.</p>
+              <div class="t-meta">
+                <span>Course: 4 Injections</span>
+                <span>Weekly Protocol</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha,%20I%20would%20like%20to%20enquire%20about%20the%20Weight%20Loss%20Injections."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+                Enquire via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: IV Infusions & Wellness -->
+        <div class="tab-pane" id="tabInfusions" role="tabpanel" aria-labelledby="btnTabInfusions">
+          <div class="treatment-grid">
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Immune Defense</span>
+                <span class="t-price">R900</span>
+              </div>
+              <h3 class="t-title">Immune Booster Drip</h3>
+              <p class="t-desc">High-dose Vitamin C, Zinc, and clinical micronutrients for rapid immune fortification
+                and recovery.</p>
+              <div class="t-meta">
+                <span>Duration: 45 Mins</span>
+                <span>Per Session</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book Infusion via
+                WhatsApp</a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Cellular Glow</span>
+                <span class="t-price">R700</span>
+              </div>
+              <h3 class="t-title">15,000mg Glutathione Glow Drip</h3>
+              <p class="t-desc">Clinical master antioxidant drip for intensive cellular detoxification, melanin
+                regulation, and luminous radiance.</p>
+              <div class="t-meta">
+                <span>Special: 4 for R2 500</span>
+                <span>High Potency</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book Infusion via
+                WhatsApp</a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Firming</span>
+                <span class="t-price">R1 000</span>
+              </div>
+              <h3 class="t-title">Collagen Infusion Drip</h3>
+              <p class="t-desc">Amino acids and hydrolyzed collagen peptides boosting dermal elasticity, joint health,
+                and hair vitality.</p>
+              <div class="t-meta">
+                <span>Duration: 45 Mins</span>
+                <span>Per Session</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book Infusion via
+                WhatsApp</a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Hydration</span>
+                <span class="t-price">R800</span>
+              </div>
+              <h3 class="t-title">Rehydration &amp; Electrolytes</h3>
+              <p class="t-desc">Balanced sterile electrolyte solution restoring cellular osmotic pressure after illness,
+                fatigue, or travel.</p>
+              <div class="t-meta">
+                <span>Duration: 30 Mins</span>
+                <span>Immediate Relief</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book Infusion via
+                WhatsApp</a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Oncology Care</span>
+                <span class="t-price">R1 000</span>
+              </div>
+              <h3 class="t-title">Post-Chemo Wellness Drip</h3>
+              <p class="t-desc">Gentle physician-monitored supportive infusion designed to replenish essential trace
+                minerals and assist recovery.</p>
+              <div class="t-meta">
+                <span>Doctor Monitored</span>
+                <span>Hospital Safe</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book Infusion via
+                WhatsApp</a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Vitality</span>
+                <span class="t-price">R1 500</span>
+              </div>
+              <h3 class="t-title">Clinical Iron Infusion</h3>
+              <p class="t-desc">Hospital-grade intravenous iron therapy for diagnosed iron deficiency and chronic
+                fatigue under direct medical supervision.</p>
+              <div class="t-meta">
+                <span>Doctor Monitored</span>
+                <span>Lab Confirmed</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book Infusion via
+                WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Wound Care & General Practice -->
+        <div class="tab-pane" id="tabMedical" role="tabpanel" aria-labelledby="btnTabMedical">
+          <div class="treatment-grid">
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Medical Care</span>
+                <span class="t-price">Consultation</span>
+              </div>
+              <h3 class="t-title">Advanced Wound Care &amp; Debridement</h3>
+              <p class="t-desc">Physician-conducted evaluation, surgical wound debridement, sterile clinical dressings,
+                and targeted regenerative healing protocols in Netcare Parklands Hospital.</p>
+              <div class="t-meta">
+                <span>Doctor-Led</span>
+                <span>Hospital Sterility</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20enquire%20about%20Wound%20Care."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+                Enquire via WhatsApp
+              </a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">General Practice</span>
+                <span class="t-price">Consultation</span>
+              </div>
+              <h3 class="t-title">General Medical Consultation</h3>
+              <p class="t-desc">Private outpatient medical consultations, comprehensive diagnostic evaluations, and
+                preventative wellness examinations conducted by Dr Larisha Pather (MBChB).</p>
+              <div class="t-meta">
+                <span>MBChB Clinician</span>
+                <span>Suite 2 Parklands</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20Medical%20Consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+                Book via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Skin & Peels (Double The Glow) -->
+        <div class="tab-pane" id="tabSkin" role="tabpanel" aria-labelledby="btnTabSkin">
+          <div class="treatment-grid">
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Dual Protocol</span>
+                <span class="t-price">R1 000</span>
+              </div>
+              <h3 class="t-title">Glow Drip + Custom Facial</h3>
+              <p class="t-desc">Pair your micronutrient glow infusion with a deep clinical dermal cleansing and
+                restorative nutrient facial mask.</p>
+              <div class="t-meta">
+                <span>Duration: 60 Mins</span>
+                <span>Double Treatment</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book via WhatsApp</a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Pigmentation</span>
+                <span class="t-price">R1 500</span>
+              </div>
+              <h3 class="t-title">Glow Drip + Medical Peel</h3>
+              <p class="t-desc">A chemical exfoliation targeting melasma and sun damage, combined with a 10,000mg
+                Glutathione infusion for inside-out radiance.</p>
+              <div class="t-meta">
+                <span>Duration: 60 Mins</span>
+                <span>Medical Strength</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book via WhatsApp</a>
+            </div>
+
+            <div class="treatment-card">
+              <div class="t-card-head">
+                <span class="t-badge">Collagen Induction</span>
+                <span class="t-price">R1 200</span>
+              </div>
+              <h3 class="t-title">Glow Drip + Microneedling</h3>
+              <p class="t-desc">Automated clinical microneedling stimulating dermal collagen synthesis, paired with an
+                intravenous recovery glow infusion.</p>
+              <div class="t-meta">
+                <span>Duration: 75 Mins</span>
+                <span>Collagen Boost</span>
+              </div>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">Book via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONLINE SKINCARE BOUTIQUE (Page 4 Anchor) -->
+    <section class="section-skincare" id="skincare" aria-label="Clinical Skincare Boutique">
+      <div class="site-container">
+        <div class="section-head text-center">
+          <div class="section-eyebrow">At-Home Dermal Care</div>
+          <h2 class="section-title">Skin Lab by Dr L Pather</h2>
+          <p class="section-subtitle">Science meets glow. Physician-formulated topical actives supporting and prolonging
+            your clinical in-office results.</p>
+        </div>
+
+        <!-- Trust Badges for E-Commerce -->
+        <div class="ecommerce-trust-banner">
+          <div class="ecom-trust-item">
+            <span class="ecom-trust-bold">Payflex 4-Instalments:</span> Pay in 4 interest-free payments
+          </div>
+          <div class="ecom-trust-divider" aria-hidden="true"></div>
+          <div class="ecom-trust-item">
+            <span class="ecom-trust-bold">The Courier Guy:</span> Nationwide door-to-door delivery (2–4 days)
+          </div>
+          <div class="ecom-trust-divider" aria-hidden="true"></div>
+          <div class="ecom-trust-item">
+            <span class="ecom-trust-bold">Doctor-Approved:</span> Clinical purity &amp; melanin-safe actives
+          </div>
+        </div>
+
+        <div class="products-grid">
+          <!-- Product 1: Hair Growth Serum -->
+          <article class="product-card" data-sku="SKINLAB-HAIR-01" data-title="Hair Growth Serum (50ml)"
+            data-price="500">
+            <div class="product-media">
+              <img src="Assets/images/hair growth serum.jpg" alt="Flourish Clinical Hair Growth Serum"
+                class="product-img" width="400" height="400" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Hair Growth Serum (50ml)</h3>
+              <p class="product-desc">Clinical hair and scalp restoration complex with bioactive peptides, biotin, and
+                placenta extract to stimulate dormant follicles.</p>
+              <div class="product-pricing">
+                <span class="price-val">R500</span>
+                <span class="payflex-note">Or 4x R125.00 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-secondary btn-block add-to-cart-btn" data-sku="SKINLAB-HAIR-01"
+                data-title="Hair Growth Serum (50ml)" data-price="500">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 2: Brightening Body Butter -->
+          <article class="product-card" data-sku="SKINLAB-BODY-02" data-title="Brightening Body Butter (200ml)"
+            data-price="600">
+            <div class="product-media">
+              <img src="Assets/images/moisturizer.jpg" alt="Skin Lab Brightening Body Butter by Dr L Pather"
+                class="product-img" width="400" height="400" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Brightening Body Butter (200ml)</h3>
+              <p class="product-desc">Rich nourishing body butter formulated by Dr Larisha to brighten hyperpigmentation
+                on knees, elbows, and body with 48h moisture.</p>
+              <div class="product-pricing">
+                <span class="price-val">R600</span>
+                <span class="payflex-note">Or 4x R150.00 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-secondary btn-block add-to-cart-btn" data-sku="SKINLAB-BODY-02"
+                data-title="Brightening Body Butter (200ml)" data-price="600">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 3: Skin Lab Sun Protector Moisturizer SPF 40 -->
+          <article class="product-card" data-sku="SKINLAB-SUN-03"
+            data-title="Skin Lab Sun Protector Moisturizer SPF 40 (50ml)" data-price="400">
+            <div class="product-media">
+              <img src="Assets/images/sun protection.jpg" alt="Skin Lab Sun Protector Moisturizer SPF 40 by Dr L Pather"
+                class="product-img" width="400" height="400" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Skin Lab Sun Protector SPF 40 (50ml)</h3>
+              <p class="product-desc">Dual-action daily sunscreen and restorative moisturizer shielding against UVA/UVB
+                rays with zero white cast on melanin skin.</p>
+              <div class="product-pricing">
+                <span class="price-val">R400</span>
+                <span class="payflex-note">Or 4x R100.00 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-secondary btn-block add-to-cart-btn" data-sku="SKINLAB-SUN-03"
+                data-title="Skin Lab Sun Protector Moisturizer SPF 40 (50ml)" data-price="400">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 4: Brightening Complex -->
+          <article class="product-card" data-sku="SKINLAB-BRIGHT-04" data-title="Brightening Complex (50ml)"
+            data-price="500">
+            <div class="product-media">
+              <img src="Assets/images/brightening complex.jpg" alt="Skin Lab Brightening Complex by Dr L Pather"
+                class="product-img" width="400" height="400" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Brightening Complex (50ml)</h3>
+              <p class="product-desc">Targeted clinical active treatment formulated by Dr Larisha to fade stubborn dark
+                marks, sun damage, and hormonal melasma.</p>
+              <div class="product-pricing">
+                <span class="price-val">R500</span>
+                <span class="payflex-note">Or 4x R125.00 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-secondary btn-block add-to-cart-btn" data-sku="SKINLAB-BRIGHT-04"
+                data-title="Brightening Complex (50ml)" data-price="500">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 5: Kojic Acid and Glutathione Soap -->
+          <article class="product-card" data-sku="SKINLAB-SOAP-05" data-title="Kojic Acid and Glutathione Soap (100g)"
+            data-price="250">
+            <div class="product-media">
+              <img src="Assets/images/soap.jpg" alt="Kojic Acid and Glutathione Soap 100g" class="product-img"
+                width="400" height="400" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Kojic Acid &amp; Glutathione Soap (100g)</h3>
+              <p class="product-desc">Doctor-formulated cleansing bar with Glutathione &amp; Vitamin C targeting
+                hyperpigmentation, melasma, and uneven tone.</p>
+              <div class="product-pricing">
+                <span class="price-val">R250</span>
+                <span class="payflex-note">Or 4x R62.50 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-secondary btn-block add-to-cart-btn" data-sku="SKINLAB-SOAP-05"
+                data-title="Kojic Acid and Glutathione Soap (100g)" data-price="250">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 6: Centella Korean Face Wash and Moisturizer -->
+          <article class="product-card" data-sku="SKINLAB-CENTELLA-06"
+            data-title="Centella Korean Face Wash and Moisturizer Set" data-price="1200">
+            <div class="product-media">
+              <img src="Assets/images/Centella.jpg" alt="Centella Korean Face Wash and Moisturizer Set"
+                class="product-img" width="400" height="400" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Centella Face Wash &amp; Moisturizer Set</h3>
+              <p class="product-desc">Premium Korean skincare set with Centella Asiatica &amp; Witch Hazel to calm
+                sensitive skin and rebuild compromised barriers.</p>
+              <div class="product-pricing">
+                <span class="price-val">R1 200</span>
+                <span class="payflex-note">Or 4x R300.00 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-secondary btn-block add-to-cart-btn" data-sku="SKINLAB-CENTELLA-06"
+                data-title="Centella Korean Face Wash and Moisturizer Set" data-price="1200">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOURCED PATIENT TESTIMONIALS (Section 5) -->
+    <section class="section-reviews" aria-label="Verified Patient Reviews">
+      <div class="site-container">
+        <div class="section-head text-center">
+          <div class="section-eyebrow">Patient Experiences</div>
+          <h2 class="section-title">Natural Clinical Outcomes</h2>
+          <p class="section-subtitle">Real feedback from patients treated under Dr Larisha's care at Parklands Hospital.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <blockquote class="review-card" data-source="facebook">
+            <div class="patient-stars" data-source="facebook" aria-label="5 out of 5 stars">
+              <span class="star-symbol">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p class="patient-quote" data-source="facebook">
+              "Dr Larisha is incredible! I was nervous about lip fillers looking artificial, but she took time to
+              explain the proportions. My lips look fuller yet completely natural. No one can tell I had anything
+              done—they just say I look rested."
+            </p>
+            <footer class="patient-author" data-source="facebook">
+              <span class="author-name">Pravina M.</span>
+              <span class="author-treatment">Lip Filler Contouring &bull; Durban</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card" data-source="facebook">
+            <div class="patient-stars" data-source="facebook" aria-label="5 out of 5 stars">
+              <span class="star-symbol">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p class="patient-quote" data-source="facebook">
+              "The IV Glow Drips and medical facial peel transformed my skin texture completely. My pigmentation patches
+              have faded significantly within three sessions. Having a registered medical doctor administer treatments
+              inside Parklands Hospital gave me complete peace of mind."
+            </p>
+            <footer class="patient-author" data-source="facebook">
+              <span class="author-name">Thandeka Z.</span>
+              <span class="author-treatment">Glow Drip + Chemical Peel &bull; Berea</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card" data-source="facebook">
+            <div class="patient-stars" data-source="facebook" aria-label="5 out of 5 stars">
+              <span class="star-symbol">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p class="patient-quote" data-source="facebook">
+              "I completed the tummy reduction package alongside her dietary guidance. Lost stubborn lower abdomen
+              centimetres without surgery or excessive downtime. Dr Larisha genuinely cares about treating root causes
+              and metabolic health."
+            </p>
+            <footer class="patient-author" data-source="facebook">
+              <span class="author-name">Suresh N.</span>
+              <span class="author-treatment">Medical Weight Management &bull; Overport</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOSPITAL LOCATION & CONTACT (Page 5 Anchor) -->
+    <section class="section-location-contact" id="hospital-base" aria-label="Practice Base and Location">
+      <div class="site-container location-grid">
+        <div class="location-details">
+          <div class="section-eyebrow">Hospital Suite Base</div>
+          <h2 class="section-title">Netcare Parklands Hospital</h2>
+          <p class="location-intro">
+            Dr Larisha Pather's aesthetic practice is based within Netcare Parklands Hospital, providing patients with
+            superior clinical hygiene, secure hospital parking, and medical emergency readiness.
+          </p>
+
+          <div class="nap-block">
+            <div class="nap-row">
+              <span class="nap-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <div>
+                <strong>Physical Address:</strong><br>
+                Suite 2, Parklands Hospital, 45 Hopelands Road, Overport, Durban, KwaZulu-Natal, 4001
+              </div>
+            </div>
+
+            <div class="nap-row">
+              <span class="nap-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </span>
+              <div>
+                <strong>Telephone &amp; WhatsApp:</strong><br>
+                <a href="tel:+27844608676">+27 84 460 8676</a>
+              </div>
+            </div>
+
+            <div class="nap-row">
+              <span class="nap-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </span>
+              <div>
+                <strong>Clinical Operating Hours:</strong><br>
+                Monday – Saturday: 09:00 – 17:00<br>
+                Sunday: Closed (By Prior Appointment Only)
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Google Maps Frame for Parklands Hospital -->
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.598687796464!2d30.99732797637847!3d-29.837851975027878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef706b4b45501fb%3A0x1a7f052528751508!2sNetcare%20Parklands%20Hospital!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
+              width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Dr Larisha Pather practice location at Netcare Parklands Hospital Durban">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Patient Intake Form (with POPIA Protection) -->
+        <div class="intake-form-wrapper" id="contact">
+          <div class="form-header">
+            <span class="form-tag">Confidential Medical Intake</span>
+            <h3 class="form-title">Request a Consultation</h3>
+            <p class="form-subtitle">Submit your details below and our clinical team will respond within 2 business
+              hours.</p>
+          </div>
+
+          <form class="patient-intake-form" id="patientForm" action="javascript:void(0);">
+            <div class="form-group">
+              <label for="patientName" class="form-label">Full Name &amp; Surname *</label>
+              <input type="text" id="patientName" name="patientName" class="form-input" required>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="patientPhone" class="form-label">Mobile Number (WhatsApp) *</label>
+                <input type="tel" id="patientPhone" name="patientPhone" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="patientEmail" class="form-label">Email Address *</label>
+                <input type="email" id="patientEmail" name="patientEmail" class="form-input" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="treatmentInterest" class="form-label">Primary Treatment of Interest *</label>
+              <select id="treatmentInterest" name="treatmentInterest" class="form-select" required>
+                <option value="">Select a procedure or protocol</option>
+                <option value="Lip Filler Contouring (R3 000 Special)">Lip Filler Contouring (R3 000 October Special)
+                </option>
+                <option value="Targeted BTOX Anti-Wrinkle (From R1 500)">Targeted BTOX Anti-Wrinkle (From R1 500)
+                </option>
+                <option value="Full Face BTOX + Lip Filler Package (R6 500)">Full Face BTOX + Lip Filler Package (R6
+                  500)</option>
+                <option value="Tummy Reduction Package (R3 500)">Tummy Reduction Package (R3 500)</option>
+                <option value="Medical Weight Loss Injections (R3 000)">Medical Weight Loss Injections (From R3 000)
+                </option>
+                <option value="Glutathione IV Glow Infusions (From R600)">Glutathione IV Glow Infusions (From R600)
+                </option>
+                <option value="Double The Glow Combination (From R1 000)">Double The Glow Combination (From R1 000)
+                </option>
+                <option value="General Aesthetic & Skin Health Consultation">General Aesthetic &amp; Skin Health
+                  Consultation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="patientMessage" class="form-label">Your Goals or Questions (Optional)</label>
+              <textarea id="patientMessage" name="patientMessage" rows="3" class="form-textarea"></textarea>
+            </div>
+
+            <!-- Mandatory POPIA Data Protection Notice -->
+            <div class="popia-notice-box">
+              <label class="popia-checkbox-label">
+                <input type="checkbox" id="popiaConsent" name="popiaConsent" class="form-checkbox" required>
+                <span>
+                  <strong>POPIA Consent:</strong> I consent to Dr Larisha Pather's practice securely processing my
+                  contact information solely for clinical communication and booking coordination under the Protection of
+                  Personal Information Act. My data will never be shared with third parties.
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-submit" id="submitFormBtn">
+              Submit Consultation Request
+            </button>
+            <div class="form-status" id="formStatus" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIP PATIENT EMAIL CAPTURE STRIP -->
+    <section class="section-vip-club" aria-label="VIP Patient Community">
+      <div class="site-container vip-flex">
+        <div class="vip-text">
+          <h3 class="vip-title">Join Dr. Larisha's Private VIP List</h3>
+          <p class="vip-sub">Receive monthly clinical specials, early booking access for holiday appointments, and
+            doctor-curated skincare advice.</p>
+        </div>
+        <form class="vip-form" id="vipForm" action="javascript:void(0);">
+          <label for="vipEmail" class="sr-only">Your email address</label>
+          <input type="email" id="vipEmail" name="vipEmail" class="vip-input" required>
+          <button type="submit" class="btn btn-primary vip-btn">Join Private List</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MASTER FOOTER -->
+  <footer class="master-footer" aria-label="Site Footer">
+    <div class="site-container footer-inner">
+      <div class="footer-col brand-col">
+        <img src="assets/logos/logo-light.svg" alt="Dr Larisha Pather Logo" class="footer-logo" width="160" height="52">
+        <p class="footer-bio">
+          Physician-administered medical aesthetics, clinical skin restoration, and metabolic wellness based at Netcare
+          Parklands Hospital, Overport, Durban.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://www.facebook.com/p/Dr-Larisha-Pather-61576050460534/" target="_blank"
+            rel="noopener noreferrer" class="social-icon-link" aria-label="Follow Dr Larisha Pather on Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/drlarisha/" target="_blank" rel="noopener noreferrer"
+            class="social-icon-link" aria-label="Follow Dr Larisha Pather on Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/dr-larisha-pather-206a1364/?isSelfProfile=false" target="_blank"
+            rel="noopener noreferrer" class="social-icon-link" aria-label="Connect with Dr Larisha Pather on LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col links-col">
+        <h4 class="footer-heading">Procedures</h4>
+        <ul class="footer-nav-list">
+          <li><a href="services.html#lip-contouring">Signature Lip Filler (R3 000)</a></li>
+          <li><a href="services.html#btox-aesthetics">Anti-Wrinkle BTOX Packages</a></li>
+          <li><a href="services.html#weight-management">Medical Weight Loss Programs</a></li>
+          <li><a href="services.html#iv-wellness">Glutathione Glow Infusions</a></li>
+          <li><a href="services.html#skin-pigmentation">Chemical Peels &amp; Microneedling</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col links-col">
+        <h4 class="footer-heading">Practice Information</h4>
+        <ul class="footer-nav-list">
+          <li><a href="about.html">About Dr. Larisha Pather</a></li>
+          <li><a href="products.html">Serene Skincare Boutique</a></li>
+          <li><a href="contact.html">Parklands Hospital Suite 2</a></li>
+          <li><a href="contact.html">Consultation Intake Form</a></li>
+          <li><a
+              href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+              target="_blank" rel="noopener noreferrer">WhatsApp Consultation Booking</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact-col">
+        <h4 class="footer-heading">Contact &amp; Hours</h4>
+        <p class="footer-contact-item"><strong>Address:</strong> Suite 2, Parklands Hospital, 45 Hopelands Road,
+          Overport, Durban, KZN</p>
+        <p class="footer-contact-item"><strong>WhatsApp / Tel:</strong> <a href="tel:+27844608676">+27 84 460 8676</a>
+        </p>
+        <p class="footer-contact-item"><strong>Email:</strong> <a
+            href="mailto:info@drlarisha.co.za">info@drlarisha.co.za</a></p>
+        <p class="footer-contact-item"><strong>Hours:</strong> Mon – Sat: 09:00 – 17:00</p>
+      </div>
+    </div>
+
+    <!-- Legal & Compliance Notice -->
+    <div class="site-container footer-legal-bar">
+      <div class="medical-disclaimer">
+        <p><strong>Medical Notice:</strong> All aesthetic procedures and medical weight management therapies are
+          personally administered by registered medical doctor Dr Larisha Pather (MBChB). Individual clinical results
+          may vary depending on physiological profile. Treatments are performed in accordance with HPCSA medical ethics
+          and patient safety protocols.</p>
+      </div>
+      <div class="legal-links-row">
+        <span>&copy; 2026 Dr Larisha Pather. All Rights Reserved.</span>
+        <span>POPIA Data Privacy Policy</span>
+        <span>Terms of Clinical Service</span>
+        <span>Engineered by Apex Digital SA</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SLIDING SKINCARE CART DRAWER -->
+  <aside class="cart-drawer-overlay" id="cartOverlay" aria-hidden="true">
+    <div class="cart-drawer" role="dialog" aria-modal="true" aria-label="Skincare Shopping Cart">
+      <div class="cart-header">
+        <h3 class="cart-title">Your Skincare Bag</h3>
+        <button type="button" class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart drawer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cart-body" id="cartItemsList">
+        <!-- Rendered dynamically via app.js -->
+        <div class="empty-cart-state" id="emptyCartMessage">
+          <p>Your skincare bag is currently empty.</p>
+          <a href="#skincare" class="btn btn-secondary btn-sm" id="exploreSkincareBtn">Explore Skincare</a>
+        </div>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-subtotal-row">
+          <span>Subtotal:</span>
+          <span class="subtotal-val" id="cartSubtotal">R0.00</span>
+        </div>
+        <div class="cart-shipping-notice">
+          Nationwide delivery via The Courier Guy. Or 4 interest-free payments with Payflex.
+        </div>
+        <button type="button" class="btn btn-primary btn-block" id="checkoutBtn" disabled>
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- FLOATING WHATSAPP BUTTON (South African Conversion Staple) -->
+  <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha,%20I%20would%20like%20to%20enquire%20about%20a%20treatment."
+    target="_blank" rel="noopener noreferrer" class="whatsapp-float-widget"
+    aria-label="Chat with Dr Larisha on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.17c-1.5 0-2.97-.4-4.26-1.16l-.31-.18-3.16.83.84-3.08-.2-.32a8.21 8.21 0 0 1-1.26-4.45c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.25 8.23zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.06 0 1.21.88 2.39 1.01 2.56.12.17 1.74 2.66 4.22 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z" />
+    </svg>
+    <span class="whatsapp-label">WhatsApp Dr Larisha</span>
+  </a>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+
+</html>

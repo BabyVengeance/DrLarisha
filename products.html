@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare Boutique | Serene Aesthetic Skincare | Dr Larisha Pather Durban</title>
+  <meta name="description" content="Shop physician-formulated Serene Aesthetic Skincare by Dr Larisha Pather. Brightening serums, glutathione face creams, and SPF50+ melanin shields. Nationwide courier across South Africa.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logos/logo.svg">
+  
+  <!-- Google Fonts: Playfair Display (Brand Display) & Plus Jakarta Sans (Brand Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Structured Data (ItemPage / MedicalStore Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Dr Larisha Pather - Serene Skincare Boutique",
+    "image": "assets/logos/logo.png",
+    "url": "https://www.facebook.com/p/Dr-Larisha-Pather-61576050460534/",
+    "telephone": "+27844608676",
+    "currenciesAccepted": "ZAR",
+    "paymentAccepted": "Payflex, Credit Card, EFT",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Suite 2, Parklands Hospital, 45 Hopelands Road",
+      "addressLocality": "Overport, Durban",
+      "addressRegion": "KwaZulu-Natal",
+      "postalCode": "4001",
+      "addressCountry": "ZA"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Emergency & Location Trust Bar -->
+  <aside class="top-trust-bar" aria-label="Practice announcement">
+    <div class="site-container trust-bar-flex">
+      <span class="trust-pill">Suite 2, Netcare Parklands Hospital, Durban</span>
+      <span class="trust-hours">Mon – Sat: 09:00 – 17:00</span>
+      <a href="tel:+27844608676" class="trust-call">Direct Line: +27 84 460 8676</a>
+    </div>
+  </aside>
+
+  <!-- Master Sticky Header -->
+  <header class="master-header" id="masterHeader">
+    <div class="site-container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Dr Larisha Pather Home">
+        <img src="assets/logos/logo.svg" alt="Dr Larisha Pather Medical Aesthetics Logo" class="brand-logo" width="118" height="58">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="services.html" class="nav-item">Treatments</a>
+        <a href="products.html" class="nav-item active" aria-current="page">Skincare</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </nav>
+
+      <!-- Header Action Group -->
+      <div class="header-actions">
+        <button type="button" class="cart-trigger" id="cartOpenBtn" aria-label="View skincare cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-counter" id="cartCount">0</span>
+        </button>
+
+        <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta">Book Consultation</a>
+
+        <!-- Mobile Hamburger Toggle (48px footprint) -->
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <img src="assets/logos/logo.svg" alt="Dr Larisha Pather Logo" class="drawer-logo" width="94" height="46">
+      <button type="button" class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-content">
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Treatments</a>
+        <a href="products.html" class="mobile-link active" aria-current="page">Skincare</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">Book Consultation</a>
+        <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha,%20I%20would%20like%20to%20enquire%20about%20a%20treatment." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+          WhatsApp Clinical Team
+        </a>
+        <div class="drawer-contact-info">
+          <p>Suite 2, Parklands Hospital, Overport</p>
+          <a href="tel:+27844608676">+27 84 460 8676</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- SUBPAGE EDITORIAL HERO -->
+    <section class="subpage-hero" aria-label="Boutique Header">
+      <div class="site-container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span class="breadcrumb-current">Skincare Boutique</span>
+        </nav>
+        <span class="section-eyebrow">Serene Aesthetic Skincare Range</span>
+        <h1 class="subpage-title">Physician-Formulated Skincare for South African Skin</h1>
+        <p class="subpage-lead">
+          Scientifically balanced active formulations curated by Dr Larisha Pather. Engineered to target stubborn hyperpigmentation, high-UV photodamage, and melanin barrier repair with clinical efficacy.
+        </p>
+        <div class="subpage-quick-stats">
+          <div class="meta-pill-item">
+            <span class="meta-pill-label">Nationwide Delivery</span>
+            <span class="meta-pill-value">The Courier Guy (2 – 4 Working Days)</span>
+          </div>
+          <div class="meta-pill-item">
+            <span class="meta-pill-label">Flexible Payments</span>
+            <span class="meta-pill-value">4 Interest-Free Instalments with Payflex</span>
+          </div>
+          <div class="meta-pill-item">
+            <span class="meta-pill-label">Clinical Formulations</span>
+            <span class="meta-pill-value">Glutathione &bull; Tranexamic &bull; Peptides</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT CATALOGUE & FILTER BAR -->
+    <section class="section-skincare" aria-label="Product Catalog">
+      <div class="site-container">
+
+        <!-- E-Commerce Trust Banner -->
+        <div class="ecommerce-trust-banner">
+          <span><strong class="ecom-trust-bold">Free Courier Delivery</strong> on all orders over R1 200</span>
+          <span class="ecom-trust-divider" aria-hidden="true"></span>
+          <span><strong class="ecom-trust-bold">Payflex:</strong> 4 Equal Payments at 0% Interest</span>
+          <span class="ecom-trust-divider" aria-hidden="true"></span>
+          <span><strong class="ecom-trust-bold">Doctor Prescribed:</strong> Formulated for Fitzpatrick IV–VI Melanin Skin</span>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="products-filter-bar" role="tablist" aria-label="Filter Skincare by Category">
+          <button type="button" class="filter-pill-btn active" data-filter="all">All Formulations</button>
+          <button type="button" class="filter-pill-btn" data-filter="brightening">Brightening &amp; Pigmentation</button>
+          <button type="button" class="filter-pill-btn" data-filter="sun">Sun Protection SPF 40</button>
+          <button type="button" class="filter-pill-btn" data-filter="barrier">Korean Skincare &amp; Barrier</button>
+          <button type="button" class="filter-pill-btn" data-filter="wellness">Hair &amp; Scalp Care</button>
+        </div>
+
+        <!-- Products Grid (6 Authentic Clinical SKUs) -->
+        <div class="products-grid">
+
+          <!-- SKU 1: Hair Growth Serum -->
+          <article class="product-card" data-category="wellness">
+            <div class="product-media">
+              <img src="Assets/images/hair growth serum.jpg" alt="Flourish Clinical Hair Growth Serum" class="product-img" width="300" height="280">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Hair Growth Serum (50ml)</h3>
+              <p class="product-desc">
+                Clinical hair restoration serum formulated with bioactive peptides, placenta extract, and high-potency biotin to reactivate dormant hair follicles and thicken hair shafts.
+              </p>
+              <ul class="product-specs-list">
+                <li>Active Peptides, Biotin &amp; Placenta Extract</li>
+                <li>Jojoba Oil &amp; Vitamin E scalp nourishment</li>
+                <li>Non-greasy, fast-absorbing micro-aliquot application</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price-val">R500.00</span>
+                <span class="payflex-note">Or 4 x R125.00 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-block add-to-cart-btn" data-sku="SKINLAB-HAIR-01" data-price="500" data-title="Hair Growth Serum (50ml)">
+                Add to Bag
+              </button>
+            </div>
+          </article>
+
+          <!-- SKU 2: Brightening Body Butter -->
+          <article class="product-card" data-category="brightening">
+            <div class="product-media">
+              <img src="Assets/images/moisturizer.jpg" alt="Skin Lab Brightening Body Butter by Dr L Pather" class="product-img" width="300" height="280">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Brightening Body Butter (200ml)</h3>
+              <p class="product-desc">
+                Rich, physician-formulated nourishing body butter designed to brighten resistant hyperpigmentation on elbows, knees, and body while sealing in 48-hour moisture.
+              </p>
+              <ul class="product-specs-list">
+                <li>Active brightening botanicals &amp; niacinamide</li>
+                <li>Deeply restorative shea butter &amp; ceramide base</li>
+                <li>Restores radiant, ultra-soft body skin texture</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price-val">R600.00</span>
+                <span class="payflex-note">Or 4 x R150.00 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-block add-to-cart-btn" data-sku="SKINLAB-BODY-02" data-price="600" data-title="Brightening Body Butter (200ml)">
+                Add to Bag
+              </button>
+            </div>
+          </article>
+
+          <!-- SKU 3: Skin Lab Sun Protector Moisturizer SPF 40 -->
+          <article class="product-card" data-category="sun">
+            <div class="product-media">
+              <img src="Assets/images/sun protection.jpg" alt="Skin Lab Sun Protector Moisturizer SPF 40 by Dr L Pather" class="product-img" width="300" height="280">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Skin Lab Sun Protector Moisturizer SPF 40 (50ml)</h3>
+              <p class="product-desc">
+                Dual-action daily sunscreen and restorative moisturizer shielding melanocytes against UVA, UVB, and environmental oxidative stress with zero ashy residue.
+              </p>
+              <ul class="product-specs-list">
+                <li>Broad-spectrum SPF 40 photoprotective barrier</li>
+                <li>Safe for melanin-rich Fitzpatrick IV–VI skin</li>
+                <li>Lightweight daily hydration without pore clogging</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price-val">R400.00</span>
+                <span class="payflex-note">Or 4 x R100.00 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-block add-to-cart-btn" data-sku="SKINLAB-SUN-03" data-price="400" data-title="Skin Lab Sun Protector Moisturizer SPF 40 (50ml)">
+                Add to Bag
+              </button>
+            </div>
+          </article>
+
+          <!-- SKU 4: Brightening Complex -->
+          <article class="product-card" data-category="brightening">
+            <div class="product-media">
+              <img src="Assets/images/brightening complex.jpg" alt="Skin Lab Brightening Complex by Dr L Pather" class="product-img" width="300" height="280">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Brightening Complex (50ml)</h3>
+              <p class="product-desc">
+                Science meets glow. Targeted clinical face treatment formulated by Dr Larisha to fade stubborn dark marks, sun damage, and hormonal melasma safely.
+              </p>
+              <ul class="product-specs-list">
+                <li>Physician-compounded active brighteners</li>
+                <li>Gentle on Fitzpatrick IV–VI melanin skin</li>
+                <li>Accelerates cellular turnover and luminous glow</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price-val">R500.00</span>
+                <span class="payflex-note">Or 4 x R125.00 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-block add-to-cart-btn" data-sku="SKINLAB-BRIGHT-04" data-price="500" data-title="Brightening Complex (50ml)">
+                Add to Bag
+              </button>
+            </div>
+          </article>
+
+          <!-- SKU 5: Kojic Acid and Glutathione Soap 100g -->
+          <article class="product-card" data-category="brightening">
+            <div class="product-media">
+              <img src="Assets/images/soap.jpg" alt="Kojic Acid and Glutathione Soap 100g" class="product-img" width="300" height="280">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Kojic Acid and Glutathione Soap (100g)</h3>
+              <p class="product-desc">
+                Doctor-formulated clinical cleansing bar with Glutathione &amp; Vitamin C targeting hyperpigmentation, melasma, and uneven skin tone by inhibiting tyrosinase.
+              </p>
+              <ul class="product-specs-list">
+                <li>Kojic Acid &amp; Pharmaceutical Glutathione</li>
+                <li>Vitamin C (Ascorbic Acid) &amp; Nourishing Coconut Oil</li>
+                <li>Clinically tested for face &amp; body clarity</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price-val">R250.00</span>
+                <span class="payflex-note">Or 4 x R62.50 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-block add-to-cart-btn" data-sku="SKINLAB-SOAP-05" data-price="250" data-title="Kojic Acid and Glutathione Soap (100g)">
+                Add to Bag
+              </button>
+            </div>
+          </article>
+
+          <!-- SKU 6: Centella Korean Face Wash and Moisturizer -->
+          <article class="product-card" data-category="barrier">
+            <div class="product-media">
+              <img src="Assets/images/Centella.jpg" alt="Centella Korean Face Wash and Moisturizer Set" class="product-img" width="300" height="280">
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Centella Korean Face Wash &amp; Moisturizer Set</h3>
+              <p class="product-desc">
+                Premium Korean skincare duo. Soothing Centella Asiatica &amp; Witch Hazel face wash paired with barrier-repairing daily moisturizer to calm inflammation and retain moisture.
+              </p>
+              <ul class="product-specs-list">
+                <li>Centella Asiatica &amp; Witch Hazel active botanicals</li>
+                <li>Calms reactive, sensitive, and post-peel skin</li>
+                <li>Paraben-free &amp; sulphate-free formulation</li>
+              </ul>
+              <div class="product-pricing">
+                <span class="price-val">R1 200.00</span>
+                <span class="payflex-note">Or 4 x R300.00 with Payflex</span>
+              </div>
+              <button type="button" class="btn btn-primary btn-block add-to-cart-btn" data-sku="SKINLAB-CENTELLA-06" data-price="1200" data-title="Centella Korean Face Wash and Moisturizer Set">
+                Add to Bag
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- CLINICAL IN-PRACTICE CHEMICAL PEEL PAIRING BANNER -->
+        <div class="clinical-pairing-card">
+          <div class="clinical-pairing-media">
+            <img src="Assets/images/permanent-pigmentation-treatment.jpg" alt="Dr Larisha Pather Permanent Pigmentation Treatment and Medical Chemical Peels" class="clinical-pairing-img" width="550" height="550" loading="lazy">
+          </div>
+          <div>
+            <span class="section-eyebrow">Medical In-Office Pairing</span>
+            <h2 style="font-size: 1.55rem; color: var(--text); margin-bottom: 12px;">Pair Your Serene Skincare with Clinical Medical Peels</h2>
+            <p style="font-size: 0.92rem; line-height: 1.6; color: var(--muted); margin-bottom: 20px;">
+              For deeper melasma, stubborn post-inflammatory hyperpigmentation, or sun damage, topicals achieve maximum efficacy when paired with physician-applied chemical peels. Dr Larisha personalises acid concentrations to safely treat melanin-rich Fitzpatrick skin types without triggering rebound pigmentation.
+            </p>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <a href="services.html#skin-pigmentation" class="btn btn-secondary">Explore Chemical Peels</a>
+              <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20enquire%20about%20pairing%20skincare%20with%20chemical%20peels." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book In-Hospital Peel</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SKINCARE CONSULTATION ADVICE CALLOUT -->
+        <div style="margin-top: 64px; padding: clamp(28px, 5vw, 44px); background-color: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-md); display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
+          <span class="section-eyebrow">Personalised Regime Guidance</span>
+          <h2 style="font-size: 1.6rem; color: var(--text);">Unsure Which Product Matches Your Skin Concern?</h2>
+          <p style="color: var(--muted); max-width: 65ch;">
+            Every patient's epidermal barrier is unique. If you are dealing with active acne, melasma, or sensitised skin, message Dr Larisha directly on WhatsApp for personalised formulation advice before ordering.
+          </p>
+          <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha,%20I%20would%20like%20guidance%20on%20which%20skincare%20products%20suit%20my%20skin." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Chat with Dr Larisha on WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MASTER FOOTER -->
+  <footer class="master-footer" aria-label="Site Footer">
+    <div class="site-container footer-inner">
+      <div class="footer-col brand-col">
+        <img src="assets/logos/logo-light.svg" alt="Dr Larisha Pather Logo" class="footer-logo" width="160" height="52">
+        <p class="footer-bio">
+          Physician-administered medical aesthetics, clinical skin restoration, and metabolic wellness based at Netcare Parklands Hospital, Overport, Durban.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://www.facebook.com/p/Dr-Larisha-Pather-61576050460534/" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Follow Dr Larisha Pather on Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/drlarisha/" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Follow Dr Larisha Pather on Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/dr-larisha-pather-206a1364/?isSelfProfile=false" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Connect with Dr Larisha Pather on LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col links-col">
+        <h4 class="footer-heading">Procedures</h4>
+        <ul class="footer-nav-list">
+          <li><a href="services.html#lip-contouring">Signature Lip Filler (R3 000)</a></li>
+          <li><a href="services.html#btox-aesthetics">Anti-Wrinkle BTOX Packages</a></li>
+          <li><a href="services.html#weight-management">Medical Weight Loss Programs</a></li>
+          <li><a href="services.html#iv-wellness">Glutathione Glow Infusions</a></li>
+          <li><a href="services.html#skin-pigmentation">Chemical Peels &amp; Microneedling</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col links-col">
+        <h4 class="footer-heading">Practice Information</h4>
+        <ul class="footer-nav-list">
+          <li><a href="about.html">About Dr. Larisha Pather</a></li>
+          <li><a href="products.html">Serene Skincare Boutique</a></li>
+          <li><a href="contact.html">Parklands Hospital Suite 2</a></li>
+          <li><a href="contact.html">Consultation Intake Form</a></li>
+          <li><a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer">WhatsApp Consultation Booking</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact-col">
+        <h4 class="footer-heading">Contact &amp; Hours</h4>
+        <p class="footer-contact-item"><strong>Address:</strong> Suite 2, Parklands Hospital, 45 Hopelands Road, Overport, Durban, KZN</p>
+        <p class="footer-contact-item"><strong>WhatsApp / Tel:</strong> <a href="tel:+27844608676">+27 84 460 8676</a></p>
+        <p class="footer-contact-item"><strong>Email:</strong> <a href="mailto:info@drlarisha.co.za">info@drlarisha.co.za</a></p>
+        <p class="footer-contact-item"><strong>Hours:</strong> Mon – Sat: 09:00 – 17:00</p>
+      </div>
+    </div>
+
+    <!-- Legal & Compliance Notice -->
+    <div class="site-container footer-legal-bar">
+      <div class="medical-disclaimer">
+        <p><strong>Medical Notice:</strong> All aesthetic procedures and medical weight management therapies are personally administered by registered medical doctor Dr Larisha Pather (MBChB). Individual clinical results may vary depending on physiological profile. Treatments are performed in accordance with HPCSA medical ethics and patient safety protocols.</p>
+      </div>
+      <div class="legal-links-row">
+        <span>&copy; 2026 Dr Larisha Pather. All Rights Reserved.</span>
+        <span>POPIA Data Privacy Policy</span>
+        <span>Terms of Clinical Service</span>
+        <span>Engineered by Apex Digital SA</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SLIDING SKINCARE CART DRAWER -->
+  <aside class="cart-drawer-overlay" id="cartOverlay" aria-hidden="true">
+    <div class="cart-drawer" role="dialog" aria-modal="true" aria-label="Skincare Shopping Cart">
+      <div class="cart-header">
+        <h3 class="cart-title">Your Skincare Bag</h3>
+        <button type="button" class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart drawer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cart-body" id="cartItemsList">
+        <!-- Rendered dynamically via app.js -->
+        <div class="empty-cart-state" id="emptyCartMessage">
+          <p>Your skincare bag is currently empty.</p>
+          <a href="products.html" class="btn btn-secondary btn-sm" id="exploreSkincareBtn">Explore Skincare</a>
+        </div>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-subtotal-row">
+          <span>Subtotal:</span>
+          <span class="subtotal-val" id="cartSubtotal">R0.00</span>
+        </div>
+        <div class="cart-shipping-notice">
+          Nationwide delivery via The Courier Guy. Or 4 interest-free payments with Payflex.
+        </div>
+        <button type="button" class="btn btn-primary btn-block" id="checkoutBtn" disabled>
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- FLOATING WHATSAPP BUTTON (South African Conversion Staple) -->
+  <a href="https://wa.me/27844608676?text=Hi%20Dr%20Larisha,%20I%20would%20like%20to%20enquire%20about%20a%20treatment." target="_blank" rel="noopener noreferrer" class="whatsapp-float-widget" aria-label="Chat with Dr Larisha on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.17c-1.5 0-2.97-.4-4.26-1.16l-.31-.18-3.16.83.84-3.08-.2-.32a8.21 8.21 0 0 1-1.26-4.45c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.25 8.23zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.06 0 1.21.88 2.39 1.01 2.56.12.17 1.74 2.66 4.22 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z"/>
+    </svg>
+    <span class="whatsapp-label">WhatsApp Dr Larisha</span>
+  </a>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

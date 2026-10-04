@@ -1,0 +1,75 @@
+{
+  "business_name": "Dr Larisha Pather",
+  "slug": "dr-larisha-pather",
+  "niche": "medical_dental_health",
+  "city": "Durban",
+  "colors": [
+    {
+      "name": "primary",
+      "hex": "#1E1B18",
+      "source": "logo text",
+      "verified": true
+    },
+    {
+      "name": "surface",
+      "hex": "#FAF8F5",
+      "source": "client brief & flyers",
+      "verified": true
+    },
+    {
+      "name": "accent",
+      "hex": "#8C7764",
+      "source": "client flyer rules",
+      "verified": true
+    },
+    {
+      "name": "secondary",
+      "hex": "#F3ECE5",
+      "source": "client flyer cards",
+      "verified": true
+    },
+    {
+      "name": "taupe",
+      "hex": "#D9CBBF",
+      "source": "client flyer badges",
+      "verified": true
+    }
+  ],
+  "fonts": [
+    {
+      "role": "display",
+      "family": "Playfair Display",
+      "source": "client flyer headings",
+      "verified": true,
+      "fallback": "serif"
+    },
+    {
+      "role": "body",
+      "family": "Plus Jakarta Sans",
+      "source": "client flyer body text",
+      "verified": true,
+      "fallback": "sans-serif"
+    }
+  ],
+  "logo": {
+    "file": "assets/logos/logo.svg",
+    "png": "assets/logos/logo.png",
+    "source": "client flyer header monogram"
+  },
+  "contact": {
+    "phone": "+27 84 460 8676",
+    "whatsapp": "+27 84 460 8676",
+    "email": "info@drlarisha.co.za",
+    "address": "Suite 2, Parklands Hospital, 45 Hopelands Road, Overport, Durban, KZN",
+    "operating_hours": "Monday – Saturday: 09:00 – 17:00 | Sunday: Closed"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/DrPather/",
+    "instagram": "https://www.instagram.com/drlarisha/",
+    "linkedin": "https://www.linkedin.com/in/dr-larisha-pather-206a1364/?isSelfProfile=false"
+  },
+  "booking_url": "https://www.linkedin.com/in/dr-larisha-pather-206a1364/?isSelfProfile=false",
+  "assets": {
+    "remote": []
+  }
+}
