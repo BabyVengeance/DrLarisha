@@ -1381,22 +1381,6 @@ p {
   transform: scale(1.02);
 }
 
-.category-banner-badge {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  background-color: rgba(30, 27, 24, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #FFFFFF;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 6px 12px;
-  border-radius: var(--radius-pill);
-}
-
 .treatment-body {
   display: flex;
   flex-direction: column;
