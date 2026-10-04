@@ -1595,6 +1595,31 @@ p {
   transition: transform 250ms var(--ease-out), box-shadow 250ms var(--ease-out), border-color 200ms ease;
 }
 
+/* Precise Product Image Background Color Matching per SKU */
+.product-card[data-sku="SKINLAB-HAIR-01"] {
+  --product-bg: #FFFFFF;
+}
+
+.product-card[data-sku="SKINLAB-BODY-02"] {
+  --product-bg: linear-gradient(90deg, #F3F3F3 0%, #F9F9F9 100%);
+}
+
+.product-card[data-sku="SKINLAB-SUN-03"] {
+  --product-bg: #E7E3D8;
+}
+
+.product-card[data-sku="SKINLAB-BRIGHT-04"] {
+  --product-bg: #E9E4DA;
+}
+
+.product-card[data-sku="SKINLAB-SOAP-05"] {
+  --product-bg: #EBE8DD;
+}
+
+.product-card[data-sku="SKINLAB-CENTELLA-06"] {
+  --product-bg: linear-gradient(180deg, #D0D0CC 0%, #DEDDD9 100%);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .product-card:hover {
     transform: translateY(-3px);
@@ -1605,20 +1630,65 @@ p {
 
 .product-media {
   position: relative;
-  background-color: #f7f2ed;
+  background: var(--product-bg, #f7f2ed);
   overflow: hidden;
+  cursor: pointer;
+}
+
+.product-inspect-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(30, 27, 24, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 220ms var(--ease-out), transform 220ms var(--ease-out), background-color 180ms ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.product-inspect-badge svg {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+}
+
+.product-card:hover .product-inspect-badge,
+.product-card:focus-within .product-inspect-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  .product-inspect-badge {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
 }
 
 .product-img {
   width: 100%;
   height: 280px;
   object-fit: contain;
-  padding: 14px;
-  transition: transform 300ms var(--ease-out);
+  padding: 0;
+  transition: transform 320ms var(--ease-out);
 }
 
 .product-card:hover .product-img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .product-volume {
@@ -1633,15 +1703,22 @@ p {
 }
 
 .product-title {
-  font-size: 1.15rem;
-  margin-bottom: 8px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #171513;
+  line-height: 1.32;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
 }
 
 .product-desc {
-  font-size: 0.88rem;
-  line-height: 1.5;
+  font-size: 0.90rem;
+  line-height: 1.62;
+  color: #423C36;
   margin-bottom: 16px;
   flex-grow: 1;
+  font-weight: 400;
 }
 
 .product-pricing {
@@ -1651,15 +1728,278 @@ p {
 .price-val {
   display: block;
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 700;
-  color: var(--text);
-  margin-bottom: 2px;
+  color: #171513;
+  margin-bottom: 3px;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 .payflex-note {
+  font-size: 0.82rem;
+  color: #595149;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   CLINICAL PRODUCT IMAGE INSPECTOR MODAL & LIGHTBOX
+   -------------------------------------------------------------------------- */
+.inspect-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(18, 16, 14, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 240ms var(--ease-out), visibility 240ms var(--ease-out);
+}
+
+.inspect-modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.inspect-modal-card {
+  position: relative;
+  background-color: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  max-width: 980px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.96) translateY(12px);
+  transition: transform 260ms var(--ease-out);
+}
+
+@media (min-width: 768px) {
+  .inspect-modal-card {
+    flex-direction: row;
+    max-height: 85vh;
+  }
+}
+
+.inspect-modal-overlay.is-open .inspect-modal-card {
+  transform: scale(1) translateY(0);
+}
+
+.inspect-modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(30, 27, 24, 0.08);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1;
+  z-index: 10;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.inspect-modal-close-btn:hover {
+  background: rgba(30, 27, 24, 0.16);
+  transform: scale(1.08);
+}
+
+.inspect-modal-left {
+  flex: 1.2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FAF8F5;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  user-select: none;
+  min-height: 300px;
+}
+
+@media (min-width: 768px) {
+  .inspect-modal-left {
+    border-bottom: none;
+    border-right: 1px solid var(--line);
+    min-height: 520px;
+  }
+}
+
+.inspect-zoom-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: zoom-in;
+  padding: 24px;
+}
+
+.inspect-zoom-stage.is-zoomed {
+  cursor: zoom-out;
+}
+
+.inspect-modal-img {
+  max-width: 100%;
+  max-height: 440px;
+  object-fit: contain;
+  transition: transform 200ms ease;
+  transform-origin: center center;
+}
+
+.inspect-zoom-stage.is-zoomed .inspect-modal-img {
+  transform: scale(2);
+  transition: transform 80ms ease-out;
+}
+
+.inspect-zoom-toolbar {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(30, 27, 24, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  color: #FFFFFF;
+  font-size: 0.76rem;
+  font-weight: 500;
+  pointer-events: auto;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+.inspect-zoom-toggle-btn {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 0.76rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+
+.inspect-zoom-toggle-btn:hover {
+  color: var(--brand-2);
+}
+
+.inspect-modal-right {
+  flex: 1;
+  padding: clamp(24px, 4vw, 36px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.inspect-modal-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand);
+  margin-bottom: 8px;
+}
+
+.inspect-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #171513;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.inspect-modal-desc {
+  font-size: 0.92rem;
+  line-height: 1.62;
+  color: #423C36;
+  margin-bottom: 20px;
+}
+
+.inspect-modal-actives-heading {
   font-size: 0.78rem;
-  color: var(--muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1E1B18;
+  margin-bottom: 8px;
+}
+
+.inspect-modal-actives-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.inspect-modal-actives-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #38332E;
+  font-weight: 500;
+}
+
+.inspect-modal-actives-list li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--brand);
+}
+
+.inspect-modal-price-row {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  margin-bottom: 18px;
+}
+
+.inspect-modal-price-val {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #171513;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.inspect-modal-payflex {
+  font-size: 0.82rem;
+  color: #595149;
+  font-weight: 500;
 }
 
 /* Clinical Skincare & Chemical Peel Pairing Banner */
@@ -2020,6 +2360,8 @@ p {
   height: 44px;
   width: auto;
   margin-bottom: 16px;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
 }
 
 .footer-bio {
@@ -2181,26 +2523,50 @@ p {
 
 .cart-title {
   font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
 }
 
 .cart-close-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-pill);
   background-color: var(--surface);
   color: var(--text);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+  transition: all var(--trans-fast);
+  touch-action: manipulation;
+  pointer-events: auto !important;
+}
+
+.cart-close-btn:hover {
+  background-color: var(--line);
+  color: var(--brand);
+  transform: rotate(90deg);
+}
+
+.cart-close-btn:active {
+  transform: scale(0.92);
+}
+
+.cart-close-btn svg {
+  pointer-events: none;
 }
 
 .cart-body {
   flex-grow: 1;
-  padding: 24px;
+  padding: 20px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .empty-cart-state {
@@ -2210,53 +2576,190 @@ p {
   flex-direction: column;
   gap: 16px;
   align-items: center;
+  padding: 32px 16px;
 }
 
+.empty-cart-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-pill);
+  background-color: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand);
+  border: 1px solid var(--line);
+}
+
+.empty-cart-state p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 26ch;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Cart Item Card */
 .cart-item-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px;
+  gap: 14px;
+  padding: 12px 14px;
   background-color: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  gap: 12px;
+  transition: border-color var(--trans-fast), box-shadow var(--trans-fast);
 }
 
-.cart-item-info {
+.cart-item-row:hover {
+  border-color: #D8D2C6;
+  box-shadow: 0 2px 8px rgba(30, 27, 24, 0.05);
+}
+
+.cart-item-thumb {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background-color: #FFFFFF;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+}
+
+.cart-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cart-item-main {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.cart-item-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .cart-item-name {
   font-size: 0.92rem;
   font-weight: 600;
-}
-
-.cart-item-price {
-  font-size: 0.85rem;
-  color: var(--muted);
+  line-height: 1.35;
+  color: var(--text);
+  margin: 0;
+  word-break: break-word;
 }
 
 .cart-remove-item {
-  width: 48px;
-  height: 48px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 4px;
+  background: none;
+  border: none;
   color: var(--muted);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: underline;
-  transition: color var(--trans-fast);
+  font-size: 0.76rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: all var(--trans-fast);
+  flex-shrink: 0;
 }
 
 .cart-remove-item:hover {
+  color: #B33A3A;
+  background-color: rgba(179, 58, 58, 0.08);
+}
+
+.cart-remove-item svg {
+  pointer-events: none;
+}
+
+.cart-item-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Quantity Picker Controls */
+.cart-qty-picker {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  padding: 2px 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.cart-qty-btn {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
   color: var(--text);
+  cursor: pointer;
+  transition: background-color var(--trans-fast), color var(--trans-fast), transform var(--trans-fast);
+  touch-action: manipulation;
+}
+
+.cart-qty-btn:hover {
+  background-color: var(--surface);
+  color: var(--brand);
+}
+
+.cart-qty-btn:active {
+  transform: scale(0.9);
+}
+
+.cart-qty-btn svg {
+  pointer-events: none;
+}
+
+.cart-qty-val {
+  min-width: 24px;
+  text-align: center;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text);
+  user-select: none;
+}
+
+.cart-item-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cart-item-total {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  font-family: var(--font-display);
+}
+
+.cart-item-unit {
+  font-size: 0.72rem;
+  color: var(--muted);
 }
 
 .cart-footer {
-  padding: 24px;
+  padding: 20px 24px;
   border-top: 1px solid var(--line);
   background-color: var(--surface);
   display: flex;
@@ -2274,12 +2777,26 @@ p {
 
 .subtotal-val {
   font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.cart-payflex-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #38342F;
+  background-color: var(--bg);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
 }
 
 .cart-shipping-notice {
   font-size: 0.78rem;
   color: var(--muted);
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 /* --------------------------------------------------------------------------
@@ -2626,24 +3143,31 @@ p {
 
 .product-specs-list {
   list-style: none;
-  font-size: 0.82rem;
-  color: var(--muted);
+  font-size: 0.85rem;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-bottom: 18px;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 0;
 }
 
 .product-specs-list li {
   position: relative;
-  padding-left: 14px;
+  padding-left: 18px;
+  line-height: 1.45;
+  color: #38332E;
+  font-weight: 500;
 }
 
 .product-specs-list li::before {
-  content: "&bull;";
+  content: "";
   position: absolute;
-  left: 0;
-  color: var(--brand);
+  left: 3px;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--brand);
 }
 
 /* --------------------------------------------------------------------------

@@ -52,8 +52,9 @@
     }
   ],
   "logo": {
-    "file": "assets/logos/logo.svg",
-    "png": "assets/logos/logo.png",
+    "file": "Assets/logos/logo-transparent.png",
+    "png": "Assets/logos/logo-transparent.png",
+    "white_bg": "Assets/logos/logo-white-bg.png",
     "source": "client flyer header monogram"
   },
   "contact": {
