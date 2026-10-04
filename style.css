@@ -715,6 +715,10 @@ p {
   transform: scale(1.03);
 }
 
+.bento-img-btox {
+  object-position: center 54%;
+}
+
 .bento-tag {
   display: none;
 }
