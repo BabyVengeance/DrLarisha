@@ -1181,8 +1181,9 @@ p {
 
 .t-card-head {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
+  gap: 12px;
   margin-bottom: 12px;
 }
 
@@ -1192,6 +1193,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--brand);
+  line-height: 1.35;
 }
 
 .t-price {
@@ -1199,6 +1201,22 @@ p {
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--text);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.t-price small,
+.t-price-from {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-right: 3px;
+  vertical-align: baseline;
 }
 
 .t-title {
