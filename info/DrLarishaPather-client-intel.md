@@ -1,6 +1,6 @@
 # Client Intelligence Dossier: Dr Larisha Pather
 
-**Practitioner:** Dr Larisha Pather (MBChB / Aesthetic Medicine & Physician)  
+**Practitioner:** Dr Larisha Pather (MBChB, Dip. Adv. Aesthetic Medicine [Cum Laude], Cert. Healthcare Management [Yale University])  
 **Practice Base:** Suite 2, Parklands Hospital, 45 Hopelands Road, Overport, Durban, KwaZulu-Natal, South Africa  
 **Direct Contact / WhatsApp:** +27 84 460 8676  
 **Primary Platforms:** Facebook (@DrPather), Instagram (@drlarisha), LinkedIn (dr-larisha-pather-206a1364)  
@@ -10,7 +10,7 @@
 
 ## 1. Executive Summary & Brand Positioning
 
-Dr Larisha Pather is a qualified medical doctor and aesthetic clinician operating out of Netcare Parklands Hospital in Overport, Durban. Unlike standard commercial beauty salons or non-medical spas, Dr Pather's practice is rooted in physician-led clinical care, patient safety, and anatomical precision.
+Dr Larisha Pather is a qualified medical doctor and aesthetic clinician operating out of Netcare Parklands Hospital in Overport, Durban. Holding an MBChB, a postgraduate Diploma in Advanced Aesthetic Medicine awarded *Cum Laude*, and a Certificate in Healthcare Management from Yale University, her practice is rooted in physician-led clinical care, patient safety, hospital governance, and anatomical precision.
 
 ### Client Direct Mandate
 > *"I like neutral balanced colors. Not loud. Simple but captures the eye."*
@@ -31,8 +31,12 @@ Dr Larisha Pather is a qualified medical doctor and aesthetic clinician operatin
 - **BTOX Full Face Rejuvenation:** R5,000
 - **BTOX Full Face + Lip Filler Combined Package:** R6,500
 
-### B. Medical Weight Loss Management
+### B. Medical Weight Loss & Body Contouring
 - **Philosophy:** *"The journey isn't about perfection, but a stronger, healthier you."*
+- **Laser Lipo Contouring (6-Session Courses):**
+  - Arms (6 sessions): R2,500
+  - Tummy (6 sessions): R3,000
+  - Thighs (6 sessions): R3,000
 - **Tummy Reduction Package:** R3,500 (Includes coloring and free post-treatment firming lotion)
 - **Double Chin Submental Reduction:** From R1,500
 - **x4 Course Weight Loss Injections:** From R3,000
@@ -48,7 +52,9 @@ Dr Larisha Pather is a qualified medical doctor and aesthetic clinician operatin
 - **High-Dose 15,000mg Glutathione Glow Drip:** R700 / session (Course of 4: R2,500)
 - **10,000mg Glutathione Glow Drip:** R600 / session (Course of 4: R2,000)
 
-### D. "Double the Glow" Combination Protocols
+### D. Skin Health & Peels
+- **Medical Graded Hydrafacial:** R650 (Deep pore cleansing, extraction & intensive hydration)
+- **Medical Chemical Peel:** R800 (Deep cleansing, hydration & stubborn hyperpigmentation/melasma)
 - **Glow Drip + Custom Facial:** R1,000
 - **Glow Drip + Medical Grade Chemical Peel:** R1,500
 - **Glow Drip + Clinical Microneedling:** R1,200
