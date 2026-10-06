@@ -85,7 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'SKINLAB-SUN-03': 'Assets/images/sun protection.jpg',
     'SKINLAB-BRIGHT-04': 'Assets/images/brightening complex.jpg',
     'SKINLAB-SOAP-05': 'Assets/images/soap.jpg',
-    'SKINLAB-CENTELLA-06': 'Assets/images/Centella.jpg'
+    'SKINLAB-CENTELLA-06': 'Assets/images/Centella.jpg',
+    'SKINLAB-SERUM-07': 'Assets/images/Brightening & anti-ageing serum.jpg'
   };
 
   let cart = [];
