@@ -816,7 +816,7 @@ p {
 }
 
 .bento-img-btox {
-  object-position: center 54%;
+  object-position: center 46%;
 }
 
 .bento-tag {
@@ -3713,6 +3713,15 @@ p {
 @media (max-width: 600px) {
   .brand-logo {
     height: 48px;
+  }
+
+  .bento-img {
+    height: 260px;
+  }
+
+  .bento-card-large .bento-img {
+    height: 260px;
+    min-height: unset;
   }
 }
 

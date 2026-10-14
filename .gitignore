@@ -21,3 +21,10 @@ node_modules/
 
 # Internal demo intel & reports
 info/
+
+# Knowledge Hub - Client Raw Files & Local Context
+context/raw/
+context/**/*.pdf
+context/**/*.docx
+context/**/*.pptx
+context/**/*.zip
