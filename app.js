@@ -86,7 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'SKINLAB-BRIGHT-04': 'Assets/images/brightening complex.jpg',
     'SKINLAB-SOAP-05': 'Assets/images/soap.jpg',
     'SKINLAB-CENTELLA-06': 'Assets/images/Centella.jpg',
-    'SKINLAB-SERUM-07': 'Assets/images/Brightening & anti-ageing serum.jpg'
+    'SKINLAB-SERUM-07': 'Assets/images/Brightening & anti-ageing serum.jpg',
+    'SKINLAB-BRIGHTRX-08': 'Assets/images/bright rx.jpg',
+    'SKINLAB-GLOW-09': 'Assets/images/glow complex.jpg'
   };
 
   let cart = [];
@@ -390,8 +392,9 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
 
       productCards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
-        if (category === 'all' || cardCat === category) {
+        const cardCat = card.getAttribute('data-category') || '';
+        const cats = cardCat.split(/\s+/).map(c => c.trim().toLowerCase());
+        if (category === 'all' || cats.includes(category.toLowerCase())) {
           card.style.display = '';
         } else {
           card.style.display = 'none';

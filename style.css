@@ -1720,6 +1720,14 @@ p {
   --product-bg: #f2f2f2;
 }
 
+.product-card[data-sku="SKINLAB-BRIGHTRX-08"] {
+  --product-bg: linear-gradient(180deg, #F3F3F3 0%, #F4F4F4 50%, #EFECE5 54%, #E9E5DC 100%);
+}
+
+.product-card[data-sku="SKINLAB-GLOW-09"] {
+  --product-bg: linear-gradient(180deg, #F3F3F3 0%, #F3F3F3 56%, #ECEBE6 60%, #E7E6E1 100%);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .product-card:hover {
     transform: translateY(-3px);
